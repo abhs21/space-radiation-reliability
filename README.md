@@ -22,6 +22,7 @@ git clone https://github.com/abhs21/space-radiation-reliability.git
 cd space-radiation-reliability
 python3 -m unittest discover -s tests -v
 python3 run_campaign.py --output-dir outputs/reproduced
+python3 verify_reproduction.py reports/diagnostics.json outputs/reproduced/diagnostics.json
 python3 validate_intervals.py --input examples/annotations --output-dir outputs/annotations
 ```
 
@@ -34,6 +35,8 @@ python3 radlab_diagnostics.py --input your.csv --instrument-id DosTel1 --day 202
 ```
 
 Required rate columns: `timestamp,instrument_id,absorbed_dose_rate`. Additional columns are allowed. Rates must be finite and nonnegative. Naive timestamps are retained without inventing a timezone; explicit offsets are normalized to UTC. Mixed conventions block numerical integration. `--day` checks literal dates for naive timestamps and UTC dates for offset-aware timestamps.
+
+Cross-version verification checks structure, counts, strings, and hashes exactly; finite floating-point values use relative and absolute tolerances of `1e-12`. This accommodates the last-digit differences observed between Python 3.9 and 3.12. It is a numerical reproduction tolerance, not measurement uncertainty.
 
 ## Annotation checker
 
