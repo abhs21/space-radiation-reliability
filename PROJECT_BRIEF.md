@@ -20,7 +20,7 @@ A reproducible report for DosTel1 and DosTel2 on March 1 and April 1–8, 2022, 
 - **Data checks:** challenge the diagnostics with small documented cases and improve useful reporting.
 - **Independent reproduction:** run the release from a clean checkout and report the environment, results, and disagreements.
 
-Abhi will coordinate the initial scope, integrate contributions, and keep the evidence and open questions current. No additional team members are confirmed yet.
+Abhi will coordinate the initial scope, integrate contributions, and keep the evidence and open questions current. On September 28, Hitaeshi Sehgal [offered to help](https://awg.osdr.space/t/space-radiation-measurement-reliability-project-proposal-and-collaborators/4682/2) with independent reproduction and repeated-timestamp checks. That work has not yet produced a verified result. The [review table](reports/timestamp-review/README.md) provides the source rows for the first batch.
 
 ## Relationship to existing work
 

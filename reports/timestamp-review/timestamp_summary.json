@@ -1,0 +1,155 @@
+{
+  "source_cases": 18,
+  "source_rows": 21500,
+  "differing_rate_groups": 58,
+  "readings_in_differing_rate_groups": 116,
+  "five_minute_aligned_differing_rate_groups": 58,
+  "unique_recorded_timestamps": 21442,
+  "five_minute_aligned_unique_timestamps": 5176,
+  "cases": [
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-03-01",
+      "source_rows": 1202,
+      "unique_recorded_timestamps": 1198,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-03-01",
+      "source_rows": 1187,
+      "unique_recorded_timestamps": 1187,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 0
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-01",
+      "source_rows": 1192,
+      "unique_recorded_timestamps": 1189,
+      "five_minute_aligned_unique_timestamps": 285,
+      "differing_rate_groups": 3
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-01",
+      "source_rows": 1197,
+      "unique_recorded_timestamps": 1197,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 0
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-02",
+      "source_rows": 1193,
+      "unique_recorded_timestamps": 1189,
+      "five_minute_aligned_unique_timestamps": 287,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-02",
+      "source_rows": 1192,
+      "unique_recorded_timestamps": 1191,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 1
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_rows": 1196,
+      "unique_recorded_timestamps": 1190,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 6
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-03",
+      "source_rows": 1192,
+      "unique_recorded_timestamps": 1188,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_rows": 1199,
+      "unique_recorded_timestamps": 1194,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 5
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_rows": 1166,
+      "unique_recorded_timestamps": 1161,
+      "five_minute_aligned_unique_timestamps": 284,
+      "differing_rate_groups": 5
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-05",
+      "source_rows": 1201,
+      "unique_recorded_timestamps": 1199,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 2
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-05",
+      "source_rows": 1190,
+      "unique_recorded_timestamps": 1188,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 2
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-06",
+      "source_rows": 1202,
+      "unique_recorded_timestamps": 1200,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 2
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-06",
+      "source_rows": 1193,
+      "unique_recorded_timestamps": 1189,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-07",
+      "source_rows": 1196,
+      "unique_recorded_timestamps": 1192,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_rows": 1190,
+      "unique_recorded_timestamps": 1184,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 6
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-08",
+      "source_rows": 1212,
+      "unique_recorded_timestamps": 1208,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 4
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-08",
+      "source_rows": 1200,
+      "unique_recorded_timestamps": 1198,
+      "five_minute_aligned_unique_timestamps": 288,
+      "differing_rate_groups": 2
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 Small, reproducible tools for checking radiation time series and SAA annotation intervals.
 
-**Project initiator: Abhi Singh.** This is a proposed community project; formal OSDR AWG subgroup recognition and collaborator participation are pending.
+**Project initiator: Abhi Singh.** This is a proposed community project; formal OSDR AWG subgroup recognition remains pending. Hitaeshi Sehgal has offered to help with independent reproduction and data checks; results from that collaboration are not yet available.
 
 ## Start here
 
@@ -10,6 +10,7 @@ Small, reproducible tools for checking radiation time series and SAA annotation 
 - [Exact source queries and snapshot hashes](reports/source_manifest.json)
 - [Project brief and ways to contribute](PROJECT_BRIEF.md)
 - [Machine-readable diagnostic results](reports/diagnostics.json)
+- [Repeated-timestamp review table and reproduction notes](reports/timestamp-review/README.md)
 
 The tools preserve repeated readings and identify questions for instrument experts. Numerical masking compares integrals of reported rates; it is not a validated physical-dose estimate.
 
