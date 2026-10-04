@@ -3,16 +3,15 @@ import csv
 import hashlib
 import io
 import json
-import re
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
-from decimal import Decimal, InvalidOperation, localcontext
+from decimal import Decimal, InvalidOperation
 from fractions import Fraction
 from pathlib import Path
 from statistics import median
 
+from timestamp_utils import decimal_text, parse_timestamp
+
 ROOT = Path(__file__).resolve().parent
-TIMESTAMP = re.compile(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.(\d+))?(Z|[+-]\d{2}:\d{2})?')
 FIELDS = [
     'instrument_id', 'day', 'source_file', 'source_url', 'sha256',
     'timezone_convention', 'timestamps_as_recorded', 'source_rows',
@@ -22,31 +21,6 @@ FIELDS = [
     'expected_from_trend_microgray_per_hour', 'absolute_differences_microgray_per_hour',
     'closest_source_positions', 'closest_source_rows',
 ]
-
-
-def parse_timestamp(text):
-    match = TIMESTAMP.fullmatch(text)
-    if not match:
-        raise ValueError('Expected ISO timestamp with seconds')
-    base, fractional, offset = match.groups()
-    if offset and offset != 'Z' and (int(offset[1:3]) > 23 or int(offset[4:6]) > 59):
-        raise ValueError('Invalid timestamp offset')
-    stamp = datetime.fromisoformat(base + (offset or '').replace('Z', '+00:00'))
-    aware = offset is not None
-    epoch = datetime(1970, 1, 1, tzinfo=timezone.utc) if aware else datetime(1970, 1, 1)
-    delta = stamp - epoch
-    seconds = Fraction(delta.days * 86400 + delta.seconds)
-    if fractional:
-        seconds += Fraction(int(fractional), 10 ** len(fractional))
-    return seconds, aware
-
-
-def decimal_text(value):
-    if value is None:
-        return None
-    with localcontext() as context:
-        context.prec = 50
-        return str(Decimal(value.numerator) / Decimal(value.denominator))
 
 
 def load_source(data_dir, source):

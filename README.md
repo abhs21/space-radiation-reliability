@@ -51,7 +51,9 @@ Input is one CSV or a folder of daily CSVs, with this exact header:
 annotator,date,start,end,label
 ```
 
-Filenames begin with the declared `YYYY-MM-DD`. Start/end timestamps need explicit offsets and are checked against that UTC day. Labels are `SAA`. Different annotators remain separate. Findings include malformed rows, date/order problems, duplicates, overlaps, and midnight review candidates. Outputs are `audit_results.json` and `flagged_intervals.csv`; source files are never edited.
+Filenames begin with the declared `YYYY-MM-DD`. Start/end timestamps need explicit offsets (including `Z`) and are checked against that UTC day. Whole-minute timestamps remain supported. Fractional seconds, including nanoseconds, are retained exactly for duration, ordering, overlap, and midnight-window checks on both supported Python versions. Labels are `SAA`. Different annotators remain separate. Findings include malformed rows, date/order problems, duplicates, overlaps, and midnight review candidates. Outputs are `audit_results.json` and `flagged_intervals.csv`; source files are never edited.
+
+Rows with wrong dates, filenames, blank annotators, or unsupported labels keep their findings but cannot generate midnight candidates. `valid_parsed_intervals` counts positive intervals with parseable timestamps; `candidate_eligible_intervals` additionally requires those metadata checks to pass. Candidates retain the original timestamp strings, a numeric `gap_seconds`, and `gap_seconds_exact` as an exact rational string (for example, `1/500000000` seconds). The original source hashes refer to the bytes actually parsed.
 
 `--window-seconds 600` sets a candidate window on **each side** of midnight, not a maximum total gap. The default was calibrated to previously reported examples; it is not an independently validated classifier. The output also reports counts for 60/120/300/600-second windows. Candidates are never merged automatically. Structural checks do not validate scientific labeling or find missing passages.
 
