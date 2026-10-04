@@ -77,7 +77,7 @@ def render_markdown(packet):
                   'Source order does not establish acquisition order. Neither closeness to a local trend nor rate range identifies a physically correct reading. Every original reading is retained.', '',
                   '## Review notes and provenance', '',
                   'The page saves notes in this browser on this device, under a key tied to the source snapshots. Export notes explicitly to keep or share them. Notes do not modify the source CSVs or the published calculations.',
-                  'The JSON export includes original timestamp/rate strings, CSV rows, neighboring readings, source URLs, and SHA-256 hashes. Files with no differing-rate groups remain in the coverage table.', '',
+                  '`review_packet.json` includes original timestamp/rate strings, CSV rows, neighboring readings, source URLs, and SHA-256 hashes. Exported notes identify the source snapshots and rows alongside each note. Files with no differing-rate groups remain in the coverage table.', '',
                   'Source-set SHA-256: ' + packet['source_set_sha256'], ''])
     return '\n'.join(lines)
 
