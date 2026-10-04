@@ -12,6 +12,7 @@ Small, reproducible tools for checking radiation time series and SAA annotation 
 - [Machine-readable diagnostic results](reports/diagnostics.json)
 - [Repeated-timestamp review table and reproduction notes](reports/timestamp-review/README.md)
 - [Neighboring-sample comparison and source-row evidence](reports/neighbor-review/README.md)
+- [Instrument-review packet and coverage table](reports/review-packet/REVIEW.md)
 
 The tools preserve repeated readings and identify questions for instrument experts. Numerical masking compares integrals of reported rates; it is not a validated physical-dose estimate.
 
@@ -29,6 +30,8 @@ python3 validate_intervals.py --input examples/annotations --output-dir outputs/
 python3 review_neighbors.py --output-dir outputs/neighbor-review
 python3 verify_reproduction.py reports/neighbor-review/neighboring_sample_groups.json outputs/neighbor-review/neighboring_sample_groups.json
 python3 verify_reproduction.py reports/neighbor-review/neighboring_sample_summary.json outputs/neighbor-review/neighboring_sample_summary.json
+python3 build_review_packet.py --output-dir outputs/review-packet
+python3 verify_reproduction.py reports/review-packet/review_packet.json outputs/review-packet/review_packet.json
 ```
 
 The campaign uses the committed public RadLab snapshots and checks their hashes. Sources were collected on September 22 and 26, 2026. Reproduction requires no network connection. Querying current data into a separate empty directory is supported with `--data-dir outputs/current-data --download-missing`; a source-hash mismatch stops the run so changed data cannot silently replace the release evidence.
@@ -42,6 +45,12 @@ python3 radlab_diagnostics.py --input your.csv --instrument-id DosTel1 --day 202
 Required rate columns: `timestamp,instrument_id,absorbed_dose_rate`. Additional columns are allowed. Rates must be finite and nonnegative. Naive timestamps are retained without inventing a timezone; explicit offsets are normalized to UTC. Mixed conventions block numerical integration. `--day` checks literal dates for naive timestamps and UTC dates for offset-aware timestamps.
 
 Cross-version verification checks structure, counts, strings, and hashes exactly; finite floating-point values use relative and absolute tolerances of `1e-12`. This accommodates the last-digit differences observed between Python 3.9 and 3.12. It is a numerical reproduction tolerance, not measurement uncertainty.
+
+## Offline reading review
+
+Open `outputs/review-packet/review_packet.html` in a browser after running the generator above. It contains the verified snapshots' differing-rate groups, instrument/date/search filters, surrounding-sample plots, source rows and hashes, and review notes. It needs no server, network connection, or third-party packages. The accompanying `REVIEW.md` summarizes all 18 instrument-day cases, including the two without differing-rate groups; `review_packet.json` contains the full source evidence.
+
+The list can be sorted by recorded rate range or by instrument/date. Rate range and closeness to a trend are descriptive comparisons, not scientific severity or proof of a correct reading. Notes stay in that browser on that device and are tied to the source snapshots. Use **Export review notes** to save them as JSON; notes do not change the source data or calculations.
 
 ## Annotation checker
 

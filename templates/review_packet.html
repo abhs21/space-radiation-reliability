@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RadLab reading review</title>
+<style>
+:root{--ink:#18344e;--cyan:#007d91;--copper:#d17032;--paper:#f0f5f7;--white:#fff;--muted:#536e7b;--line:#ccd8dd}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Arial,sans-serif}
+button,input,select,textarea{font:inherit}button,select{cursor:pointer}a{color:var(--cyan)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+header{padding:28px 36px 22px;border-bottom:1px solid var(--line);background:var(--white);display:flex;justify-content:space-between;gap:22px;align-items:end}
+h1{font:32px/1.1 Georgia,serif;margin:0 0 9px}h2{font-size:21px;margin:0 0 12px}h3{font-size:15px;margin:0 0 9px}
+p{margin:0 0 12px}.muted,.caption{color:var(--muted)}.caption{font-size:12px}.mono{font-family:Menlo,Consolas,monospace;overflow-wrap:anywhere}.eyebrow{color:var(--cyan);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.layout{display:grid;grid-template-columns:330px minmax(0,1fr);max-width:1500px;margin:auto}.rail{border-right:1px solid var(--line);padding:24px 20px}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px}.wide{grid-column:1/-1}label{display:block;font-size:12px;font-weight:700}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:4px;background:var(--white);color:var(--ink);padding:9px;margin-top:5px}
+.list{display:grid;gap:7px;max-height:65vh;overflow:auto;padding:4px 4px 6px 0}.group{background:var(--white);border:1px solid var(--line);border-left:3px solid transparent;text-align:left;padding:12px 13px;border-radius:4px;color:var(--ink);width:100%}
+.group[aria-pressed=true]{border-color:var(--cyan);border-left-color:var(--cyan);background:#e8f5f7}.group strong,.group span{display:block}.group strong{font-size:13px}.group .mono{font-size:12px;margin:5px 0}.group .caption{font-size:11px}
+.detail{padding:30px 34px;min-width:0}.sheet{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:24px}.detail-top{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.pill{font-size:11px;white-space:nowrap;background:#e8f5f7;color:var(--cyan);padding:6px 9px;border-radius:3px}
+.chart{margin:22px 0 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}.chart svg{display:block;width:100%;height:auto}.chart-empty{padding:34px;color:var(--muted);text-align:center}
+.readings{display:grid;grid-template-columns:1fr 1fr;gap:10px}.reading{padding:13px 15px;border:1px solid var(--line);border-top:3px solid var(--cyan);border-radius:4px}.reading:nth-child(even){border-top-color:var(--copper)}.reading .rate{font:18px/1.4 Menlo,Consolas,monospace;margin-top:5px;overflow-wrap:anywhere}
+.context{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-top:18px}.context p{font-size:13px;overflow-wrap:anywhere}
+.limit{border-left:3px solid var(--line);padding-left:12px;margin-top:18px;font-size:13px;color:var(--muted)}
+details{border-top:1px solid var(--line);padding-top:15px;margin-top:20px}summary{cursor:pointer;font-size:13px;font-weight:700}.evidence{font-size:12px;margin-top:14px}.evidence p{overflow-wrap:anywhere}
+.notes{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}.note-row{display:flex;gap:18px;align-items:end;margin-bottom:10px}.note-row label{max-width:240px;flex:1}
+textarea{resize:vertical;min-height:95px}.action{border:1px solid var(--cyan);background:var(--cyan);color:white;border-radius:4px;padding:9px 15px;font-size:13px}.action:disabled{opacity:.5;cursor:default}.subtle{background:white;color:var(--cyan)}
+.empty{padding:25px 0;color:var(--muted)}footer{max-width:1500px;margin:auto;padding:20px 36px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:800px){header{padding:22px;display:block}header .caption{margin-top:15px}.layout{grid-template-columns:1fr}.rail{border-right:0;border-bottom:1px solid var(--line);padding:18px 22px}.list{max-height:230px}.detail{padding:20px 14px}.sheet{padding:18px}.detail-top{display:block}.pill{display:inline-block;margin-top:8px}h1{font-size:28px}.readings,.context{grid-template-columns:1fr}.note-row{display:block}.note-row label{max-width:none}footer{padding:20px 22px}}
+@media print{header{padding:0 0 16px}.layout{display:block}.rail,.notes,.action{display:none}.detail{padding:18px 0}.sheet{border:0;padding:0}details{display:block}details>*{display:block}footer{padding:16px 0}body{background:white}}
+</style>
+</head>
+<body>
+<header>
+<div><div class="eyebrow">Space Radiation Measurement Reliability</div><h1>One timestamp. Two readings.</h1><p class="muted">Inspect the recorded values, their neighbors, and the source rows.</p></div>
+<div><div id="batch-count" class="caption"></div><div class="caption">Fixed public RadLab snapshots · DosTel1 / DosTel2</div></div>
+</header>
+<main class="layout">
+<aside class="rail" aria-label="Filter readings">
+<div class="filters">
+<label>Instrument<select id="instrument"><option value="">All instruments</option></select></label>
+<label>Date<select id="day"><option value="">All dates</option></select></label>
+<label class="wide">Find a timestamp, file, or CSV row<input id="search" type="search" placeholder="e.g. 2022-04-07 or 465"></label>
+<label class="wide">Order<select id="order"><option value="range">Largest rate difference</option><option value="time">Instrument and date</option></select></label>
+</div>
+<p id="result-count" class="caption" style="margin-top:15px" aria-live="polite"></p>
+<div id="groups" class="list"></div>
+</aside>
+<section class="detail" aria-label="Selected readings"><div id="detail" class="sheet"></div></section>
+</main>
+<footer>Closeness to a local trend does not determine a physically correct reading. Source order does not establish acquisition order. Every original reading is retained.</footer>
+<script id="packet-data" type="application/json">__PACKET_JSON__</script>
+<script>
+'use strict';
+const packet=JSON.parse(document.getElementById('packet-data').textContent);
+const el=id=>document.getElementById(id);
+const sourceKey='radlab-reading-review:'+packet.source_set_sha256;
+let notes={},selected=null,visible=[];
+let storageAvailable=true;
+try{const saved=JSON.parse(localStorage.getItem(sourceKey)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))notes=saved;}catch(error){storageAvailable=false;}
+const statuses=[['unreviewed','Unreviewed'],['reviewed','Reviewed'],['guidance','Needs instrument guidance']];
+const statusLabel=value=>(statuses.find(item=>item[0]===value)||statuses[0])[1];
+function node(tag,text,className){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
+function option(parent,value,label){const n=node('option',label);n.value=value;parent.append(n);}
+function shortNumber(value){const n=Number(value);return Number.isFinite(n)?n.toLocaleString('en-US',{maximumSignificantDigits:7}):String(value);}
+function noteFor(group){const n=notes[group.group_key];return n&&typeof n==='object'?{status:statuses.some(s=>s[0]===n.status)?n.status:'unreviewed',text:typeof n.text==='string'?n.text:''}:{status:'unreviewed',text:''};}
+for(const value of [...new Set(packet.summary.cases.map(c=>c.instrument_id))].sort())option(el('instrument'),value,value);
+for(const value of [...new Set(packet.summary.cases.map(c=>c.day))].sort())option(el('day'),value,value);
+el('batch-count').textContent=packet.summary.source_rows.toLocaleString('en-US')+' readings · '+packet.summary.source_cases+' files · '+packet.groups.length+' groups';
+function renderList(){
+ el('groups').replaceChildren();
+ el('result-count').textContent=visible.length+' of '+packet.groups.length+' groups shown. Rate difference is not severity.';
+ for(const group of visible){
+  const button=node('button',undefined,'group');button.type='button';button.setAttribute('aria-pressed',String(selected===group.group_key));
+  button.append(node('strong',group.instrument_id+' · '+group.day),node('span',group.timestamps_as_recorded[0].split('T').slice(1).join('T'),'mono'),node('span','CSV rows '+group.source_rows.join(', ')+' · difference '+shortNumber(group.rate_range_microgray_per_hour)+' μGy/h','caption'));
+  const note=noteFor(group);if(note.status!=='unreviewed'||note.text)button.append(node('span',statusLabel(note.status)+(note.text?' · note saved':''),'caption'));
+  button.addEventListener('click',()=>{selected=group.group_key;renderList();renderDetail();});
+  el('groups').append(button);
+ }
+ if(!visible.length)el('groups').append(node('p','No groups match. Try all instruments, all dates, or a shorter search.','empty'));
+}
+function filter(){
+ const search=el('search').value.trim().toLowerCase();
+ visible=packet.groups.filter(g=>(!el('instrument').value||g.instrument_id===el('instrument').value)&&(!el('day').value||g.day===el('day').value)&&(!search||[g.source_file,...g.timestamps_as_recorded,...g.source_rows.map(String)].join(' ').toLowerCase().includes(search)));
+ if(el('order').value==='time')visible.sort((a,b)=>[a.instrument_id,a.day,a.timestamps_as_recorded[0]].join('/').localeCompare([b.instrument_id,b.day,b.timestamps_as_recorded[0]].join('/')));
+ if(!visible.some(g=>g.group_key===selected))selected=visible.length?visible[0].group_key:null;
+ renderList();renderDetail();
+}
+function svgNode(tag,attrs,text){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [key,value]of Object.entries(attrs||{}))n.setAttribute(key,String(value));if(text!==undefined)n.textContent=text;return n;}
+function plot(group){
+ const wrapper=node('div',undefined,'chart');
+ const items=[];
+ const pre=Number(group.pre_gap_seconds)||0,post=Number(group.post_gap_seconds)||0;
+ if(group.before)group.before.rates_microgray_per_hour.forEach((rate,i)=>items.push({x:-pre,rate:Number(rate),color:'#536e7b',row:group.before.source_rows[i]}));
+ group.rates_microgray_per_hour.forEach((rate,i)=>items.push({x:0,rate:Number(rate),color:i%2?'#d17032':'#007d91',row:group.source_rows[i]}));
+ if(group.after)group.after.rates_microgray_per_hour.forEach((rate,i)=>items.push({x:post,rate:Number(rate),color:'#536e7b',row:group.after.source_rows[i]}));
+ if(!items.every(p=>Number.isFinite(p.rate))){wrapper.append(node('p','These values exceed the plot range. Inspect the original rate strings below.','chart-empty'));return wrapper;}
+ const rates=items.map(p=>p.rate),low=Math.min(...rates),high=Math.max(...rates),range=high-low;
+ if(!range){wrapper.append(node('p','The plot cannot distinguish these values at its display precision. Inspect the original rate strings below.','chart-empty'));return wrapper;}
+ const yMin=Math.max(0,low-range*.15),yMax=high+range*.15;
+ const x=value=>pre+post?65+(value+pre)/(pre+post)*590:360;
+ const y=value=>210-(value-yMin)/(yMax-yMin)*165;
+ const svg=svgNode('svg',{viewBox:'0 0 720 270',role:'img'});
+ svg.append(svgNode('title',{},'Reported readings and neighboring samples at '+group.timestamps_as_recorded[0]));
+ for(let i=0;i<=3;i++){const rate=yMin+(yMax-yMin)*i/3;svg.append(svgNode('line',{x1:65,x2:655,y1:y(rate),y2:y(rate),stroke:'#ccd8dd'}),svgNode('text',{x:57,y:y(rate)+4,'text-anchor':'end',fill:'#536e7b','font-size':11},shortNumber(rate)));}
+ svg.append(svgNode('line',{x1:x(0),x2:x(0),y1:32,y2:218,stroke:'#ccd8dd','stroke-dasharray':'3 4'}));
+ if(group.comparison_status!=='unavailable')svg.append(svgNode('line',{x1:x(-pre),x2:x(post),y1:y(Number(group.before.rates_microgray_per_hour[0])),y2:y(Number(group.after.rates_microgray_per_hour[0])),stroke:'#536e7b','stroke-width':2,'stroke-dasharray':'5 4'}));
+ for(const item of items){const circle=svgNode('circle',{cx:x(item.x),cy:y(item.rate),r:item.x===0?6:4,fill:item.color,stroke:'#fff','stroke-width':2});circle.append(svgNode('title',{},'CSV row '+item.row+' · '+item.rate+' μGy/h'));svg.append(circle);}
+ svg.append(svgNode('text',{x:65,y:18,fill:'#536e7b','font-size':11},'Reported rate (μGy/h)'));
+ const ticks=[[-pre,'Before · '+shortNumber(pre)+' s'],[0,'Same timestamp'],[post,'After · '+shortNumber(post)+' s']];
+ for(const [time,label]of ticks){if(time===0&&label!=='Same timestamp')continue;svg.append(svgNode('text',{x:x(time),y:245,'text-anchor':time<0?'start':time>0?'end':'middle',fill:'#536e7b','font-size':11},label));}
+ wrapper.append(svg,node('p',group.comparison_status==='unavailable'?'No unambiguous surrounding trend: '+group.comparison_blockers.join(', ').replaceAll('_',' ')+'.':'Dashed line: interpolation between surrounding samples. The colored points retain the source readings.','caption'));
+ return wrapper;
+}
+function contextBlock(title,group,gap){const block=node('div');block.append(node('h3',title));if(!group){block.append(node('p','No neighboring timestamp in this file.','muted'));return block;}block.append(node('p',group.timestamps_as_recorded.join(' / '),'mono'),node('p','CSV row(s) '+group.source_rows.join(', ')),node('p',group.rates_microgray_per_hour.join(' / ')+' μGy/h','mono'),node('p',shortNumber(gap)+' seconds from the conflicting timestamp.','caption'));return block;}
+function downloadNotes(){
+ const entries=packet.groups.filter(g=>{const n=noteFor(g);return n.status!=='unreviewed'||n.text.trim();}).map(g=>({source_file:g.source_file,sha256:g.sha256,source_rows:g.source_rows,timestamps_as_recorded:g.timestamps_as_recorded,...noteFor(g)}));
+ const data={source_set_sha256:packet.source_set_sha256,entries};
+ const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}));
+ const anchor=node('a');anchor.href=url;anchor.download='radlab-review-notes.json';anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function renderDetail(){
+ const detail=el('detail');detail.replaceChildren();
+ const group=visible.find(g=>g.group_key===selected);
+ if(!group){detail.append(node('h2','No reading selected'),node('p','Choose another instrument or date to inspect a differing-rate group.','muted'));return;}
+ const top=node('div',undefined,'detail-top'),heading=node('div');
+ heading.append(node('div',group.instrument_id+' · '+group.day,'eyebrow'),node('h2',group.timestamps_as_recorded[0],'mono'));
+ const comparison=group.comparison_status==='unavailable'?'Trend unavailable':group.comparison_status==='tied'?'Equal distance from trend':'Local trend available';
+ top.append(heading,node('span',comparison,'pill'));detail.append(top,plot(group));
+ const readings=node('div',undefined,'readings');
+ group.rates_microgray_per_hour.forEach((rate,index)=>{const card=node('div',undefined,'reading');card.append(node('h3','Source row '+group.source_rows[index]),node('div',rate+' μGy/h','rate'),node('p',group.timestamps_as_recorded[index],'caption mono'));if(group.absolute_differences_microgray_per_hour)card.append(node('p','Distance from trend: '+shortNumber(group.absolute_differences_microgray_per_hour[index])+' μGy/h','caption'));readings.append(card);});
+ detail.append(readings);
+ const context=node('div',undefined,'context');context.append(contextBlock('Before',group.before,group.pre_gap_seconds),contextBlock('After',group.after,group.post_gap_seconds));detail.append(context);
+ if(group.closest_source_rows.length)detail.append(node('p','Closer to the local trend: CSV row(s) '+group.closest_source_rows.join(', ')+'. This comparison does not determine which reading is physically correct.','limit'));
+ const evidence=node('details'),source=node('div',undefined,'evidence');evidence.append(node('summary','Source evidence'));
+ source.append(node('p','File: '+group.source_file,'mono'),node('p','Rows count the CSV header as row 1.'),node('p','SHA-256: '+group.sha256,'mono'),node('p','Recorded time convention: '+group.timezone_convention.replaceAll('_',' ')));
+ try{const url=new URL(group.source_url);if(!['https:','http:'].includes(url.protocol))throw new Error('Unsupported source URL');const link=node('a','Open original source query');link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';source.append(link);}catch(error){source.append(node('p','No web source query is available.'));}
+ evidence.append(source);detail.append(evidence);
+ const box=node('section',undefined,'notes');box.append(node('h3','Review notes'));
+ const note=noteFor(group),row=node('div',undefined,'note-row'),statusLabelNode=node('label','Review status'),status=node('select');status.id='review-status';for(const [value,label]of statuses)option(status,value,label);status.value=note.status;statusLabelNode.append(status);
+ const download=node('button','Export review notes','action subtle');download.type='button';download.addEventListener('click',downloadNotes);row.append(statusLabelNode,download);box.append(row);
+ const label=node('label','Note'),text=node('textarea');text.id='review-note';text.placeholder='Record a question, an interpretation to verify, or a source reference.';text.value=note.text;label.append(text);box.append(label);
+ const saved=node('p',storageAvailable?'Notes stay in this browser on this device. Export them to keep or share a copy.':'This browser cannot save notes between visits. Export them before closing the page.','caption');saved.style.marginTop='8px';saved.setAttribute('aria-live','polite');box.append(saved);
+ function save(){const value={status:status.value,text:text.value};if(value.status==='unreviewed'&&!value.text.trim())delete notes[group.group_key];else notes[group.group_key]=value;try{localStorage.setItem(sourceKey,JSON.stringify(notes));storageAvailable=true;saved.textContent='Saved on this device. Export notes to keep or share a copy.';}catch(error){storageAvailable=false;saved.textContent='Notes are available for this visit. Export them before closing the page.';}renderList();}
+ status.addEventListener('change',save);text.addEventListener('input',save);detail.append(box);
+}
+el('instrument').addEventListener('change',filter);el('day').addEventListener('change',filter);el('order').addEventListener('change',filter);el('search').addEventListener('input',filter);
+filter();
+</script>
+</body>
+</html>

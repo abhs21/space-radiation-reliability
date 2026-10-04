@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add a reproducible offline reading-review page with filters, surrounding-sample plots, source provenance, browser-local review notes and JSON export, plus a Markdown coverage report.
 - Add a source-traceable neighboring-sample comparison for the 58 differing-rate timestamp groups, preserving all readings and exposing missing neighbors and ties.
 - Preserve fractional-second annotation timestamps exactly across Python 3.9 and 3.12, including `Z` offsets, interval ordering, overlaps, and midnight thresholds. Export the exact candidate gap alongside its numeric value.
 - Prevent invalid annotation labels, blank annotators, wrong dates, or wrong filenames from generating midnight candidates while retaining structural findings.

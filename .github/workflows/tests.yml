@@ -20,3 +20,7 @@ jobs:
       - run: python review_neighbors.py --output-dir outputs/neighbor-review
       - run: python verify_reproduction.py reports/neighbor-review/neighboring_sample_groups.json outputs/neighbor-review/neighboring_sample_groups.json
       - run: python verify_reproduction.py reports/neighbor-review/neighboring_sample_summary.json outputs/neighbor-review/neighboring_sample_summary.json
+      - run: python build_review_packet.py --output-dir outputs/review-packet
+      - run: python verify_reproduction.py reports/review-packet/review_packet.json outputs/review-packet/review_packet.json
+      - run: cmp reports/review-packet/review_packet.html outputs/review-packet/review_packet.html
+      - run: cmp reports/review-packet/REVIEW.md outputs/review-packet/REVIEW.md
