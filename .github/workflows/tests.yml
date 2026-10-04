@@ -17,3 +17,6 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python run_campaign.py --output-dir outputs/reproduced
       - run: python verify_reproduction.py reports/diagnostics.json outputs/reproduced/diagnostics.json
+      - run: python review_neighbors.py --output-dir outputs/neighbor-review
+      - run: python verify_reproduction.py reports/neighbor-review/neighboring_sample_groups.json outputs/neighbor-review/neighboring_sample_groups.json
+      - run: python verify_reproduction.py reports/neighbor-review/neighboring_sample_summary.json outputs/neighbor-review/neighboring_sample_summary.json

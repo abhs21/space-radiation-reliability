@@ -23,4 +23,4 @@ The script checks every snapshot against `reports/source_manifest.json` before e
 
 For an independent reproduction of the original scientific report, use the frozen v0.1.1 release and its README commands first. This added review table is a separate follow-up on the same snapshots. Return the release/commit, Python version, operating system, reproduction result, and any discrepancies before proposing source-data changes.
 
-Useful next checks are whether the pattern persists beyond this fixed batch, whether nearby rows reveal a processing pattern, and whether instrument documentation explains the records. Current diagnostics alone cannot answer those questions. Broader sampling should be specified before inspecting additional dates.
+The [neighboring-sample follow-up](../neighbor-review/README.md) now compares these readings with their local trend while retaining all source rows. Useful next checks are whether the pattern persists beyond this fixed batch and whether instrument documentation explains the records. Neither comparison establishes the instrument's processing mechanism. Broader sampling should be specified before inspecting additional dates.

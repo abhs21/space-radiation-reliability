@@ -2,7 +2,7 @@
 
 Small, reproducible tools for checking radiation time series and SAA annotation intervals.
 
-**Project initiator: Abhi Singh.** This is a proposed community project; formal OSDR AWG subgroup recognition remains pending. Hitaeshi Sehgal has offered to help with independent reproduction and data checks; results from that collaboration are not yet available.
+**Project initiator: Abhi Singh.** This is a proposed community project; formal OSDR AWG subgroup recognition remains pending. Hitaeshi Sehgal contributed a neighboring-sample comparison of the repeated readings. The calculations were independently checked against the public snapshots; the [reproducible follow-up](reports/neighbor-review/README.md) preserves the readings and describes the limits of that comparison.
 
 ## Start here
 
@@ -11,6 +11,7 @@ Small, reproducible tools for checking radiation time series and SAA annotation 
 - [Project brief and ways to contribute](PROJECT_BRIEF.md)
 - [Machine-readable diagnostic results](reports/diagnostics.json)
 - [Repeated-timestamp review table and reproduction notes](reports/timestamp-review/README.md)
+- [Neighboring-sample comparison and source-row evidence](reports/neighbor-review/README.md)
 
 The tools preserve repeated readings and identify questions for instrument experts. Numerical masking compares integrals of reported rates; it is not a validated physical-dose estimate.
 
@@ -25,6 +26,9 @@ python3 -m unittest discover -s tests -v
 python3 run_campaign.py --output-dir outputs/reproduced
 python3 verify_reproduction.py reports/diagnostics.json outputs/reproduced/diagnostics.json
 python3 validate_intervals.py --input examples/annotations --output-dir outputs/annotations
+python3 review_neighbors.py --output-dir outputs/neighbor-review
+python3 verify_reproduction.py reports/neighbor-review/neighboring_sample_groups.json outputs/neighbor-review/neighboring_sample_groups.json
+python3 verify_reproduction.py reports/neighbor-review/neighboring_sample_summary.json outputs/neighbor-review/neighboring_sample_summary.json
 ```
 
 The campaign uses the committed public RadLab snapshots and checks their hashes. Sources were collected on September 22 and 26, 2026. Reproduction requires no network connection. Querying current data into a separate empty directory is supported with `--data-dir outputs/current-data --download-missing`; a source-hash mismatch stops the run so changed data cannot silently replace the release evidence.
