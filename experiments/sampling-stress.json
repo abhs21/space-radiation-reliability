@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "fixed_before_download": "2026-10-08",
+  "instruments": ["DosTel1", "DosTel2"],
+  "days": ["2022-05-01", "2022-05-02", "2022-05-03", "2022-05-04", "2022-05-05", "2022-05-06", "2022-05-07", "2022-06-01", "2022-06-02", "2022-06-03", "2022-06-04", "2022-06-05", "2022-06-06", "2022-06-07"],
+  "phase_offsets_minutes": [0, 10, 20],
+  "block_lengths_minutes": [5, 15, 30],
+  "stride_factors": [2, 5, 10],
+  "start_spacing_minutes": 30,
+  "boundary_margin_minutes": 30,
+  "max_attempts_per_missing_file": 2,
+  "max_concurrent_requests": 3,
+  "unavailable_policy": "Record unavailable cases without substituting dates",
+  "analysis": "Reported-series trapezoidal sensitivity; no physical-dose accuracy or uncertainty bound"
+}

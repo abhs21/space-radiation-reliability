@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+- Fix diagnostic and integration timestamp precision across Python 3.9/3.12, preserving nanosecond identity and exact interval subtraction; retain the original 18-file report schema and results.
+- Add constant, linear, peaked, adaptive-cadence and hidden-peak controls, plus all-case masking at 0/10/20-minute offsets.
+- Freeze a 28 instrument-day May/June extension before acquisition. Preserve all 28 header-only responses, the successful populated-date API control, hashes and exclusions; do not substitute dates or claim added measurement evidence.
+- Narrow the proposal to source-data quality checks for downstream users, with instrument interpretation and subgroup recognition still pending.
+
+- Add a reproducible offline reading-review page with filters, surrounding-sample plots, source provenance, browser-local review notes and JSON export, plus a Markdown coverage report.
+- Add a source-traceable neighboring-sample comparison for the 58 differing-rate timestamp groups, preserving all readings and exposing missing neighbors and ties.
+- Preserve fractional-second annotation timestamps exactly across Python 3.9 and 3.12, including `Z` offsets, interval ordering, overlaps, and midnight thresholds. Export the exact candidate gap alongside its numeric value.
+- Prevent invalid annotation labels, blank annotators, wrong dates, or wrong filenames from generating midnight candidates while retaining structural findings.
+
 ## 0.1.1 — 2026-09-26
 
 - Replace byte-for-byte report comparison with exact structural checks and a `1e-12` relative/absolute floating-point tolerance. Hosted Python 3.12 checks exposed last-digit differences while all scientific tests passed.
@@ -13,4 +25,4 @@
 - Reusable command-line annotation checker with synthetic examples.
 - 17 automated tests; offline reproduction and original-case regression checks.
 
-Formal subgroup recognition, confirmed collaborators, domain validation, and external adoption remain pending.
+Formal subgroup recognition, domain validation and external adoption remain pending. Hitaeshi’s confirmed contribution is described in the project brief.
