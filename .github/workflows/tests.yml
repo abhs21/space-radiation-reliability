@@ -24,3 +24,6 @@ jobs:
       - run: python verify_reproduction.py reports/review-packet/review_packet.json outputs/review-packet/review_packet.json
       - run: cmp reports/review-packet/review_packet.html outputs/review-packet/review_packet.html
       - run: cmp reports/review-packet/REVIEW.md outputs/review-packet/REVIEW.md
+      - run: python run_stress_test.py --output-dir outputs/stress-reproduced
+      - run: python verify_reproduction.py reports/stress-test/results.json outputs/stress-reproduced/results.json
+      - run: cmp reports/stress-test/REPORT.md outputs/stress-reproduced/REPORT.md
