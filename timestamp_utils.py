@@ -51,3 +51,16 @@ def utc_day(seconds):
 
 def midnight_seconds(day):
     return Fraction((day - EPOCH_DAY).days * 86400)
+
+
+def format_timestamp(seconds, aware=False):
+    whole = seconds // 1
+    fraction = seconds - whole
+    stamp = datetime(1970, 1, 1) + timedelta(seconds=whole)
+    text = stamp.isoformat()
+    if fraction:
+        with localcontext() as context:
+            context.prec = max(50, len(str(fraction.denominator)) + 5)
+            digits = format(Decimal(fraction.numerator) / Decimal(fraction.denominator), 'f').split('.')[1]
+        text += '.' + digits.rstrip('0').ljust(6, '0')
+    return text + ('+00:00' if aware else '')

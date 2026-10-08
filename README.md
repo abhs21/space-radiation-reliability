@@ -1,12 +1,13 @@
 # Space Radiation Measurement Reliability
 
-Small, reproducible tools for checking radiation time series and SAA annotation intervals.
+Reproducible checks of how timestamps, sampling gaps and processing choices affect radiation-data summaries, preserving every original reading for expert review.
 
 **Project initiator: Abhi Singh.** This is a proposed community project; formal OSDR AWG subgroup recognition remains pending. Hitaeshi Sehgal contributed a neighboring-sample comparison of the repeated readings. The calculations were independently checked against the public snapshots; the [reproducible follow-up](reports/neighbor-review/README.md) preserves the readings and describes the limits of that comparison.
 
 ## Start here
 
-- [Diagnostic report: 18 instrument-day cases](reports/REPORT.md)
+- [Diagnostic report: original 18 instrument-day cases](reports/REPORT.md)
+- [Sampling stress test: fixed 28-query extension, empty responses and phase checks](reports/stress-test/REPORT.md)
 - [Exact source queries and snapshot hashes](reports/source_manifest.json)
 - [Project brief and ways to contribute](PROJECT_BRIEF.md)
 - [Machine-readable diagnostic results](reports/diagnostics.json)
@@ -26,6 +27,8 @@ cd space-radiation-reliability
 python3 -m unittest discover -s tests -v
 python3 run_campaign.py --output-dir outputs/reproduced
 python3 verify_reproduction.py reports/diagnostics.json outputs/reproduced/diagnostics.json
+python3 run_stress_test.py --output-dir outputs/stress-reproduced
+python3 verify_reproduction.py reports/stress-test/results.json outputs/stress-reproduced/results.json
 python3 validate_intervals.py --input examples/annotations --output-dir outputs/annotations
 python3 review_neighbors.py --output-dir outputs/neighbor-review
 python3 verify_reproduction.py reports/neighbor-review/neighboring_sample_groups.json outputs/neighbor-review/neighboring_sample_groups.json
@@ -42,9 +45,15 @@ Check another rate CSV:
 python3 radlab_diagnostics.py --input your.csv --instrument-id DosTel1 --day 2022-04-01 --output outputs/your-diagnostics.json
 ```
 
-Required rate columns: `timestamp,instrument_id,absorbed_dose_rate`. Additional columns are allowed. Rates must be finite and nonnegative. Naive timestamps are retained without inventing a timezone; explicit offsets are normalized to UTC. Mixed conventions block numerical integration. `--day` checks literal dates for naive timestamps and UTC dates for offset-aware timestamps.
+Required rate columns: `timestamp,instrument_id,absorbed_dose_rate`. Additional columns are allowed. Rates must be finite and nonnegative. Naive timestamps are retained without inventing a timezone; explicit offsets are normalized to UTC. Fractional seconds, including nanoseconds, are retained exactly for timestamp identity, sorting and interval subtraction; only elapsed differences are converted to floating point for numerical integration. Mixed conventions block numerical integration. `--day` checks literal dates for naive timestamps and UTC dates for offset-aware timestamps.
 
 Cross-version verification checks structure, counts, strings, and hashes exactly; finite floating-point values use relative and absolute tolerances of `1e-12`. This accommodates the last-digit differences observed between Python 3.9 and 3.12. It is a numerical reproduction tolerance, not measurement uncertainty.
+
+## Sampling stress test
+
+The separate protocol was committed locally before downloading both instruments for May 1–7 and June 1–7, 2022. All 28 requests returned header-only CSVs; these exact responses and hashes are retained in `data/stress-test`, without replacement dates. A known populated control query matched its original snapshot. This extension adds no new measurement evidence.
+
+The two original integration-eligible series were tested with 0/10/20-minute mask-start offsets, lengths 5/15/30 minutes and strides 2/5/10. Every mask case, empty block and excluded series is recorded. Synthetic constant, linear, peaked and changing-cadence controls test the implementation. Identical retained observations can conceal arbitrarily different peak integrals, so these sensitivity numbers are not missing-dose bounds. The original 18-file results remain unchanged.
 
 ## Offline reading review
 

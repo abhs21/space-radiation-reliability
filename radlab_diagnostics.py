@@ -5,11 +5,12 @@ import hashlib
 import json
 import math
 from collections import defaultdict
-from datetime import date, datetime, timedelta, timezone
+from datetime import date
 from pathlib import Path
 from statistics import median
 
 from radlab_coverage import audit as masking_audit
+from timestamp_utils import format_timestamp, parse_timestamp, utc_day
 
 
 def diagnose(path, instrument_id, day=None, source_url=None):
@@ -39,25 +40,23 @@ def diagnose(path, instrument_id, day=None, source_url=None):
                     issues.append({'row': number, 'kind': 'unexpected_instrument'})
                     continue
                 try:
-                    stamp = datetime.fromisoformat(raw['timestamp'].replace('Z', '+00:00'))
+                    normalized, aware = parse_timestamp(raw['timestamp'], allow_minutes=True)
                     rate = float(raw['absorbed_dose_rate'])
                     if not math.isfinite(rate) or rate < 0:
                         raise ValueError('invalid rate')
                 except (ValueError, TypeError):
                     issues.append({'row': number, 'kind': 'invalid_timestamp_or_rate'})
                     continue
-                aware = stamp.utcoffset() is not None
-                normalized = stamp.astimezone(timezone.utc) if aware else stamp
-                if expected_day and normalized.date() != expected_day:
+                if expected_day and utc_day(normalized) != expected_day:
                     issues.append({'row': number, 'kind': 'outside_requested_day'})
                 readings.append((normalized, rate, number, aware))
                 by_time[(aware, normalized)].append({'row': number, 'rate': rate})
     result['parsed_rows'] = len(readings)
     duplicate_groups = [
-        {'timestamp': stamp.isoformat(), 'rows': rows,
+        {'timestamp': format_timestamp(stamp, aware), 'rows': rows,
          'distinct_rates': sorted({row['rate'] for row in rows}),
          'conflicting': len({row['rate'] for row in rows}) > 1}
-        for (_, stamp), rows in by_time.items() if len(rows) > 1
+        for (aware, stamp), rows in by_time.items() if len(rows) > 1
     ]
     result['duplicate_groups'] = duplicate_groups
     result['duplicate_timestamp_count'] = len(duplicate_groups)
@@ -72,12 +71,12 @@ def diagnose(path, instrument_id, day=None, source_url=None):
     elif readings:
         result['out_of_order_transitions'] = sum(a[0] > b[0] for a, b in zip(readings, readings[1:]))
         unique = sorted({r[0] for r in readings})
-        gaps = [(b-a).total_seconds() for a, b in zip(unique, unique[1:])]
+        gaps = [float(b-a) for a, b in zip(unique, unique[1:])]
         if gaps:
             result['spacing_seconds'] = {'basis': 'sorted_unique_timestamps', 'min': min(gaps),
                                          'median': median(gaps), 'max': max(gaps)}
-        result['first_timestamp'] = unique[0].isoformat()
-        result['last_timestamp'] = unique[-1].isoformat()
+        result['first_timestamp'] = format_timestamp(unique[0], readings[0][3])
+        result['last_timestamp'] = format_timestamp(unique[-1], readings[0][3])
     reasons = []
     if issues:
         reasons.append('structural_or_value_findings')
@@ -90,7 +89,7 @@ def diagnose(path, instrument_id, day=None, source_url=None):
     if not reasons:
         rows = sorted((r[0], r[1]) for r in readings)
         try:
-            numerical = masking_audit(rows, instrument_id)
+            numerical = masking_audit(rows, instrument_id, aware=readings[0][3])
             numerical['timestamp_timezone'] = result['timezone_convention']
             result['numerical_masking'] = numerical
         except ValueError as exc:
