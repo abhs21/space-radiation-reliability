@@ -1,0 +1,285 @@
+{
+  "protocol_sha256": "0024b4d014ca5ece2e593737908f9f239581570b7b1ed5bbd8b9137747fac3e9",
+  "sources": [
+    {
+      "file": "dostel1-2022-05-01.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-01",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-01T00%3A00&timestamp%3C2022-05-02T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:21.593351+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-01.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-01",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-01T00%3A00&timestamp%3C2022-05-02T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:21.593784+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-02.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-02",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-02T00%3A00&timestamp%3C2022-05-03T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:21.594054+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-02.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-02",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-02T00%3A00&timestamp%3C2022-05-03T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.040948+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-03.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-03",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-03T00%3A00&timestamp%3C2022-05-04T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.153513+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-03.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-03",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-03T00%3A00&timestamp%3C2022-05-04T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.258798+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-04.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-04",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-04T00%3A00&timestamp%3C2022-05-05T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.452070+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-04.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-04",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-04T00%3A00&timestamp%3C2022-05-05T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.562785+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-05.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-05",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-05T00%3A00&timestamp%3C2022-05-06T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.675648+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-05.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-05",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-05T00%3A00&timestamp%3C2022-05-06T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.878670+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-06.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-06",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-06T00%3A00&timestamp%3C2022-05-07T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:22.994791+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-06.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-06",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-06T00%3A00&timestamp%3C2022-05-07T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.099263+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-05-07.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-05-07",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-05-07T00%3A00&timestamp%3C2022-05-08T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.294188+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-05-07.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-05-07",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-05-07T00%3A00&timestamp%3C2022-05-08T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.420651+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-01.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-01",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-01T00%3A00&timestamp%3C2022-06-02T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.534043+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-01.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-01",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-01T00%3A00&timestamp%3C2022-06-02T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.715490+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-02.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-02",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-02T00%3A00&timestamp%3C2022-06-03T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:23.848115+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-02.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-02",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-02T00%3A00&timestamp%3C2022-06-03T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.064254+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-03.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-03",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-03T00%3A00&timestamp%3C2022-06-04T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.138032+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-03.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-03",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-03T00%3A00&timestamp%3C2022-06-04T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.268384+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-04.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-04",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-04T00%3A00&timestamp%3C2022-06-05T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.481764+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-04.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-04",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-04T00%3A00&timestamp%3C2022-06-05T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.570965+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-05.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-05",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-05T00%3A00&timestamp%3C2022-06-06T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.686438+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-05.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-05",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-05T00%3A00&timestamp%3C2022-06-06T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:24.917707+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-06.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-06",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-06T00%3A00&timestamp%3C2022-06-07T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:25.017713+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-06.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-06",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-06T00%3A00&timestamp%3C2022-06-07T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:25.118589+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel1-2022-06-07.csv",
+      "instrument_id": "DosTel1",
+      "day": "2022-06-07",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-06-07T00%3A00&timestamp%3C2022-06-08T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:25.349732+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    },
+    {
+      "file": "dostel2-2022-06-07.csv",
+      "instrument_id": "DosTel2",
+      "day": "2022-06-07",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-06-07T00%3A00&timestamp%3C2022-06-08T00%3A00&absorbed_dose_rate&format=csv",
+      "attempted_at_utc": "2026-10-08T21:10:25.446732+00:00",
+      "status": "downloaded",
+      "sha256": "e59f92a189b0dbc34306befd87da562c9d4bfcc8f25cf939396b71c8e33ebc0e",
+      "bytes": 44
+    }
+  ]
+}
