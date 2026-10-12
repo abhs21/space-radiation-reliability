@@ -73,7 +73,7 @@ function renderList(){
  el('result-count').textContent=visible.length+' of '+packet.groups.length+' groups shown. Rate difference is not severity.';
  for(const group of visible){
   const button=node('button',undefined,'group');button.type='button';button.setAttribute('aria-pressed',String(selected===group.group_key));
-  button.append(node('strong',group.instrument_id+' · '+group.day),node('span',group.timestamps_as_recorded[0].split('T').slice(1).join('T'),'mono'),node('span','CSV rows '+group.source_rows.join(', ')+' · difference '+shortNumber(group.rate_range_microgray_per_hour)+' μGy/h','caption'));
+  button.append(node('strong',group.instrument_id+' · '+group.day),node('span',group.timestamps_as_recorded[0].split('T').slice(1).join('T'),'mono'),node('span','CSV rows '+group.source_rows.join(', ')+' (header is row 1) · difference '+shortNumber(group.rate_range_microgray_per_hour)+' μGy/h','caption'));
   const note=noteFor(group);if(note.status!=='unreviewed'||note.text)button.append(node('span',statusLabel(note.status)+(note.text?' · note saved':''),'caption'));
   button.addEventListener('click',()=>{selected=group.group_key;renderList();renderDetail();});
   el('groups').append(button);
@@ -106,17 +106,20 @@ function plot(group){
  for(let i=0;i<=3;i++){const rate=yMin+(yMax-yMin)*i/3;svg.append(svgNode('line',{x1:65,x2:655,y1:y(rate),y2:y(rate),stroke:'#ccd8dd'}),svgNode('text',{x:57,y:y(rate)+4,'text-anchor':'end',fill:'#536e7b','font-size':11},shortNumber(rate)));}
  svg.append(svgNode('line',{x1:x(0),x2:x(0),y1:32,y2:218,stroke:'#ccd8dd','stroke-dasharray':'3 4'}));
  if(group.comparison_status!=='unavailable')svg.append(svgNode('line',{x1:x(-pre),x2:x(post),y1:y(Number(group.before.rates_microgray_per_hour[0])),y2:y(Number(group.after.rates_microgray_per_hour[0])),stroke:'#536e7b','stroke-width':2,'stroke-dasharray':'5 4'}));
- for(const item of items){const circle=svgNode('circle',{cx:x(item.x),cy:y(item.rate),r:item.x===0?6:4,fill:item.color,stroke:'#fff','stroke-width':2});circle.append(svgNode('title',{},'CSV row '+item.row+' · '+item.rate+' μGy/h'));svg.append(circle);}
+ for(const item of items){const circle=svgNode('circle',{cx:x(item.x),cy:y(item.rate),r:item.x===0?6:4,fill:item.color,stroke:'#fff','stroke-width':2});circle.append(svgNode('title',{},'CSV row '+item.row+' (header is row 1) · '+item.rate+' μGy/h'));svg.append(circle);}
  svg.append(svgNode('text',{x:65,y:18,fill:'#536e7b','font-size':11},'Reported rate (μGy/h)'));
  const ticks=[[-pre,'Before · '+shortNumber(pre)+' s'],[0,'Same timestamp'],[post,'After · '+shortNumber(post)+' s']];
  for(const [time,label]of ticks){if(time===0&&label!=='Same timestamp')continue;svg.append(svgNode('text',{x:x(time),y:245,'text-anchor':time<0?'start':time>0?'end':'middle',fill:'#536e7b','font-size':11},label));}
  wrapper.append(svg,node('p',group.comparison_status==='unavailable'?'No unambiguous surrounding trend: '+group.comparison_blockers.join(', ').replaceAll('_',' ')+'.':'Dashed line: interpolation between surrounding samples. The colored points retain the source readings.','caption'));
  return wrapper;
 }
-function contextBlock(title,group,gap){const block=node('div');block.append(node('h3',title));if(!group){block.append(node('p','No neighboring timestamp in this file.','muted'));return block;}block.append(node('p',group.timestamps_as_recorded.join(' / '),'mono'),node('p','CSV row(s) '+group.source_rows.join(', ')),node('p',group.rates_microgray_per_hour.join(' / ')+' μGy/h','mono'),node('p',shortNumber(gap)+' seconds from the conflicting timestamp.','caption'));return block;}
+function contextBlock(title,group,gap){const block=node('div');block.append(node('h3',title));if(!group){block.append(node('p','No neighboring timestamp in this file.','muted'));return block;}block.append(node('p',group.timestamps_as_recorded.join(' / '),'mono'),node('p','CSV row(s) '+group.source_rows.join(', ')+' (header is row 1)'),node('p',group.rates_microgray_per_hour.join(' / ')+' μGy/h','mono'),node('p',shortNumber(gap)+' seconds from the conflicting timestamp.','caption'));return block;}
+function reviewNotesExport(){
+ const entries=packet.groups.filter(g=>{const n=noteFor(g);return n.status!=='unreviewed'||n.text.trim();}).map(g=>({source_file:g.source_file,sha256:g.sha256,source_rows:g.source_rows,timestamps_as_recorded:g.timestamps_as_recorded,rates_microgray_per_hour:g.rates_microgray_per_hour,...noteFor(g)}));
+ return {source_set_sha256:packet.source_set_sha256,rate_unit:'microgray/hour',source_row_convention:'CSV header is row 1; first data row is row 2.',entries};
+}
 function downloadNotes(){
- const entries=packet.groups.filter(g=>{const n=noteFor(g);return n.status!=='unreviewed'||n.text.trim();}).map(g=>({source_file:g.source_file,sha256:g.sha256,source_rows:g.source_rows,timestamps_as_recorded:g.timestamps_as_recorded,...noteFor(g)}));
- const data={source_set_sha256:packet.source_set_sha256,entries};
+ const data=reviewNotesExport();
  const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}));
  const anchor=node('a');anchor.href=url;anchor.download='radlab-review-notes.json';anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
@@ -129,17 +132,17 @@ function renderDetail(){
  const comparison=group.comparison_status==='unavailable'?'Trend unavailable':group.comparison_status==='tied'?'Equal distance from trend':'Local trend available';
  top.append(heading,node('span',comparison,'pill'));detail.append(top,plot(group));
  const readings=node('div',undefined,'readings');
- group.rates_microgray_per_hour.forEach((rate,index)=>{const card=node('div',undefined,'reading');card.append(node('h3','Source row '+group.source_rows[index]),node('div',rate+' μGy/h','rate'),node('p',group.timestamps_as_recorded[index],'caption mono'));if(group.absolute_differences_microgray_per_hour)card.append(node('p','Distance from trend: '+shortNumber(group.absolute_differences_microgray_per_hour[index])+' μGy/h','caption'));readings.append(card);});
+ group.rates_microgray_per_hour.forEach((rate,index)=>{const card=node('div',undefined,'reading');card.append(node('h3','Source row '+group.source_rows[index]),node('p','CSV header is row 1.','caption'),node('div',rate+' μGy/h','rate'),node('p',group.timestamps_as_recorded[index],'caption mono'));if(group.absolute_differences_microgray_per_hour)card.append(node('p','Distance from trend: '+shortNumber(group.absolute_differences_microgray_per_hour[index])+' μGy/h','caption'));readings.append(card);});
  detail.append(readings);
  const context=node('div',undefined,'context');context.append(contextBlock('Before',group.before,group.pre_gap_seconds),contextBlock('After',group.after,group.post_gap_seconds));detail.append(context);
- if(group.closest_source_rows.length)detail.append(node('p','Closer to the local trend: CSV row(s) '+group.closest_source_rows.join(', ')+'. This comparison does not determine which reading is physically correct.','limit'));
+ if(group.closest_source_rows.length)detail.append(node('p','Closer to the local trend: CSV row(s) '+group.closest_source_rows.join(', ')+' (header is row 1). This comparison does not determine which reading is physically correct.','limit'));
  const evidence=node('details'),source=node('div',undefined,'evidence');evidence.append(node('summary','Source evidence'));
  source.append(node('p','File: '+group.source_file,'mono'),node('p','Rows count the CSV header as row 1.'),node('p','SHA-256: '+group.sha256,'mono'),node('p','Recorded time convention: '+group.timezone_convention.replaceAll('_',' ')));
  try{const url=new URL(group.source_url);if(!['https:','http:'].includes(url.protocol))throw new Error('Unsupported source URL');const link=node('a','Open original source query');link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';source.append(link);}catch(error){source.append(node('p','No web source query is available.'));}
  evidence.append(source);detail.append(evidence);
  const box=node('section',undefined,'notes');box.append(node('h3','Review notes'));
  const note=noteFor(group),row=node('div',undefined,'note-row'),statusLabelNode=node('label','Review status'),status=node('select');status.id='review-status';for(const [value,label]of statuses)option(status,value,label);status.value=note.status;statusLabelNode.append(status);
- const download=node('button','Export review notes','action subtle');download.type='button';download.addEventListener('click',downloadNotes);row.append(statusLabelNode,download);box.append(row);
+ const download=node('button','Export all notes','action subtle');download.type='button';download.addEventListener('click',downloadNotes);row.append(statusLabelNode,download);box.append(row,node('p','Exports saved notes and review statuses for all groups in this packet, including groups hidden by filters.','caption'));
  const label=node('label','Note'),text=node('textarea');text.id='review-note';text.placeholder='Record a question, an interpretation to verify, or a source reference.';text.value=note.text;label.append(text);box.append(label);
  const saved=node('p',storageAvailable?'Notes stay in this browser on this device. Export them to keep or share a copy.':'This browser cannot save notes between visits. Export them before closing the page.','caption');saved.style.marginTop='8px';saved.setAttribute('aria-live','polite');box.append(saved);
  function save(){const value={status:status.value,text:text.value};if(value.status==='unreviewed'&&!value.text.trim())delete notes[group.group_key];else notes[group.group_key]=value;try{localStorage.setItem(sourceKey,JSON.stringify(notes));storageAvailable=true;saved.textContent='Saved on this device. Export notes to keep or share a copy.';}catch(error){storageAvailable=false;saved.textContent='Notes are available for this visit. Export them before closing the page.';}renderList();}

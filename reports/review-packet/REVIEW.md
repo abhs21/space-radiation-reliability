@@ -6,6 +6,8 @@ This packet contains 18 source files, 21,500 readings, and 58 differing-rate tim
 Comparisons: 58 available, 0 tied, 0 unavailable.
 The list is sorted by the absolute range of the recorded rates. That order does not measure scientific severity or determine a correct reading.
 
+CSV row numbers count the header as row 1; the first data row is row 2.
+
 ## Largest recorded rate differences
 
 | Instrument | Day | Recorded timestamp | CSV rows | Rate range (microgray/hour) | Local comparison |
@@ -55,7 +57,7 @@ Source order does not establish acquisition order. Neither closeness to a local 
 
 ## Review notes and provenance
 
-The page saves notes in this browser on this device, under a key tied to the source snapshots. Export notes explicitly to keep or share them. Notes do not modify the source CSVs or the published calculations.
-`review_packet.json` includes original timestamp/rate strings, CSV rows, neighboring readings, source URLs, and SHA-256 hashes. Exported notes identify the source snapshots and rows alongside each note. Files with no differing-rate groups remain in the coverage table.
+The page saves notes in this browser on this device, under a key tied to the source snapshots. Use Export all notes to keep or share every saved note and review status in this packet, including groups hidden by filters. Notes do not modify the source CSVs or the published calculations.
+`review_packet.json` includes original timestamp/rate strings, CSV rows, neighboring readings, source URLs, and SHA-256 hashes. Exported notes identify the source snapshots and rows alongside each note, retain the original rate strings in microgray/hour, and state that the CSV header is row 1. Files with no differing-rate groups remain in the coverage table.
 
 Source-set SHA-256: c82cce694786e649b650aef1f28d0a9b66fa462c6d0c367ec72d413701fe63c3
