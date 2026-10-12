@@ -18,6 +18,12 @@ The checker now preserves fractional timestamps exactly across supported Python 
 
 We need an instrument or RadLab contact to explain the repeated five-minute timestamps, channel/direction identity, rate averaging, timezone and quality flags. The [DOSTEL paper](https://arxiv.org/pdf/2107.01672) describes 20/100-second storage intervals; the [RadLab DosTel2 entry](https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/dostel2) lists 300-second cadence. These may describe different stages of processing. We also need to establish available date coverage before designing any later measurement sample.
 
+## Current technical milestone
+
+Martin's [October 12 question](https://awg.osdr.space/t/space-radiation-measurement-reliability-project-proposal-and-collaborators/4682/5) asks how variable integration times affect cumulative dose in a DosTel2/SPACEDOS02 comparison. The [synthetic interval-accounting demonstration](reports/interval-accounting/REPORT.md) now tests this distinction: genuine interval means conserve dose over identical complete support when weighted by their actual durations. Simple averaging, gaps, cut intervals and clock-window mismatch can change a computed summary. Six synthetic controls and their full ledgers reproduce these effects without assigning them to either physical instrument.
+
+The next input is the plotted December 4, 2019 DosTel2/SPACEDOS02A-F export, with interval durations, timestamp anchoring, wall-time versus live-time normalization and native-to-export processing. The instruments' response and shared coverage must also be considered before attributing an observed discrepancy to integration time. Martin's technical interest is not subgroup approval.
+
 ## Relationship to existing work
 
 This proposed subgroup focuses on source-data checks before downstream modeling. The existing [telemetry/anomaly project](https://awg.osdr.space/t/sharing-project-report-data-mining-for-space-habitats/3397) studies environmental and biological associations, and the [LEO Dosimetry SAA/GCR subgroup](https://awg.osdr.space/t/leo-dosimetry-saa-gcr-separation-using-ml-new-subgroup/3665) studies separation and labeling. Scope agreement with these teams and the AI/ML leads is part of the proposal. The annotation-interval checker supports the separate LEO collaboration; it is not the core claim of this subgroup.

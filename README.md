@@ -59,7 +59,29 @@ The two original integration-eligible series were tested with 0/10/20-minute mas
 
 Open `outputs/review-packet/review_packet.html` in a browser after running the generator above. It contains the verified snapshots' differing-rate groups, instrument/date/search filters, surrounding-sample plots, source rows and hashes, and review notes. It needs no server, network connection, or third-party packages. The accompanying `REVIEW.md` summarizes all 18 instrument-day cases, including the two without differing-rate groups; `review_packet.json` contains the full source evidence.
 
-The list can be sorted by recorded rate range or by instrument/date. Rate range and closeness to a trend are descriptive comparisons, not scientific severity or proof of a correct reading. Notes stay in that browser on that device and are tied to the source snapshots. Use **Export review notes** to save them as JSON; notes do not change the source data or calculations.
+The list can be sorted by recorded rate range or by instrument/date. Rate range and closeness to a trend are descriptive comparisons, not scientific severity or proof of a correct reading. Notes stay in that browser on that device and are tied to the source snapshots. Use **Export all notes** to save every recorded note and review status in the packet as JSON, including groups hidden by filters. The export retains the original rate strings in microgray/hour and identifies source snapshots and CSV rows; the header is row 1 and the first data row is row 2. Notes do not change the source data or calculations.
+
+## Synthetic interval accounting
+
+[The synthetic demonstration](reports/interval-accounting/REPORT.md) checks explicit interval means with constant, linear, adaptive-pulse, narrow-boundary, missing/conflicting and gain/clock controls. Complete-interval dose is `sum(mean_rate * duration_seconds / 3600)` in microgray. Duration-weighted regrouping conserves dose; unweighted averaging can bias adaptive samples. Partial-bin allocation is an explicit assumption, and unobserved gaps retain an unbounded upper dose limit under nonnegativity alone. These controls do not attribute a real instrument discrepancy to acquisition timing.
+
+```sh
+python3 interval_accounting.py --output-dir outputs/interval-accounting
+python3 verify_reproduction.py reports/interval-accounting/results.json outputs/interval-accounting/results.json
+```
+
+For documented interval means, `--input your-intervals.json` accepts this structure. Times are seconds from one declared common origin, intervals are ordered and nonoverlapping, and rates average over the stated wall-time intervals. No duration or live-time correction is inferred. The optional `window_seconds` supplies comparison bounds; otherwise the window is the explicit interval span. Unsupported units, negative/nonfinite rates, duplicates, conflicts and overlaps reject the input before outputs are written.
+
+```json
+{
+  "rate_unit": "microgray/hour",
+  "window_seconds": [0, 1000],
+  "intervals": [
+    {"start_seconds": 0, "end_seconds": 100, "mean_rate": "2.000"},
+    {"start_seconds": 100, "end_seconds": 1000, "mean_rate": "2.000"}
+  ]
+}
+```
 
 ## Annotation checker
 
