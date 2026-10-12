@@ -1,6 +1,7 @@
 import csv
 import hashlib
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -91,6 +92,45 @@ class ReviewPacketTests(unittest.TestCase):
             empty = build_packet(folder, {'sources': []})
             write_packet(Path(folder) / 'empty', empty)
             self.assertEqual(json.loads((Path(folder) / 'empty/review_packet.json').read_text())['groups'], [])
+
+    @unittest.skipUnless(shutil.which('node'), 'Node.js is needed to exercise browser export serialization')
+    def test_notes_download_retains_original_rates_and_all_saved_groups(self):
+        with tempfile.TemporaryDirectory() as folder:
+            _, manifest = self.source(folder)
+            packet = build_packet(folder, manifest)
+            first, second = packet['groups']
+            notes = {first['group_key']: {'status': 'reviewed', 'text': ''},
+                     second['group_key']: {'status': 'unreviewed', 'text': 'Check original rates'},
+                     'stale-group': {'status': 'reviewed', 'text': 'Outside this packet'}}
+            packet['groups'].append(dict(first, group_key='unsaved-group'))
+            page = render_html(packet)
+            helpers = page.split('const statuses=', 1)[1].split('for(const value of', 1)[0]
+            exporter = page.split('function reviewNotesExport(){', 1)[1].split('function renderDetail(){', 1)[0]
+            script = (
+                'const packet=' + json.dumps(packet) + ';const notes=' + json.dumps(notes) + ';'
+                'const visible=[packet.groups[0]];const selected=visible[0].group_key;'
+                'let exportedBlob,filename;'
+                'const document={createElement:()=>({click(){filename=this.download;}})};'
+                "const URL={createObjectURL(blob){exportedBlob=blob;return 'blob:test';},revokeObjectURL(){}};"
+                'const setTimeout=()=>{};'
+                'const statuses=' + helpers + 'function reviewNotesExport(){' + exporter +
+                'downloadNotes();exportedBlob.text().then(text=>process.stdout.write(JSON.stringify({filename,data:JSON.parse(text)})));'
+            )
+            result = subprocess.run([shutil.which('node'), '-e', script], capture_output=True, text=True, check=True)
+            download = json.loads(result.stdout)
+            self.assertEqual(download['filename'], 'radlab-review-notes.json')
+            exported = download['data']
+            self.assertEqual(exported['source_set_sha256'], packet['source_set_sha256'])
+            self.assertEqual(exported['rate_unit'], 'microgray/hour')
+            self.assertEqual(exported['source_row_convention'], 'CSV header is row 1; first data row is row 2.')
+            self.assertEqual(len(exported['entries']), 2)
+            for entry, group in zip(exported['entries'], [first, second]):
+                for field in ['source_file', 'sha256', 'source_rows', 'timestamps_as_recorded',
+                              'rates_microgray_per_hour']:
+                    self.assertEqual(entry[field], group[field])
+                self.assertEqual(entry['status'], notes[group['group_key']]['status'])
+                self.assertEqual(entry['text'], notes[group['group_key']]['text'])
+            self.assertEqual(exported['entries'][1]['rates_microgray_per_hour'], ['2.000', '9'])
 
     def test_cli_hash_change_does_not_write_outputs(self):
         with tempfile.TemporaryDirectory() as folder:
