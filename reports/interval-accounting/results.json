@@ -1,0 +1,2284 @@
+{
+  "title": "Synthetic interval-mean accounting demonstration",
+  "input_contract": "Ordered, nonoverlapping [start_seconds,end_seconds) wall-time intervals with explicit mean_rate and microgray/hour units; one time origin per series.",
+  "formula": "D_microgray = sum(mean_rate * (end_seconds-start_seconds) / 3600)",
+  "arithmetic": "Exact rational arithmetic internally; decimal strings rendered to 50-digit precision.",
+  "scope": "Synthetic accounting only; no native durations or physical timing inferred from RadLab timestamps.",
+  "fixtures": [
+    {
+      "name": "constant",
+      "intervals": [
+        {
+          "start_seconds": 0,
+          "end_seconds": 100,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 100,
+          "end_seconds": 200,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 200,
+          "end_seconds": 300,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 300,
+          "end_seconds": 400,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 400,
+          "end_seconds": 500,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 500,
+          "end_seconds": 600,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 600,
+          "end_seconds": 700,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 700,
+          "end_seconds": 800,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 800,
+          "end_seconds": 900,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 900,
+          "end_seconds": 920,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 920,
+          "end_seconds": 940,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 940,
+          "end_seconds": 960,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 960,
+          "end_seconds": 980,
+          "mean_rate": 2
+        },
+        {
+          "start_seconds": 980,
+          "end_seconds": 1000,
+          "mean_rate": 2
+        }
+      ],
+      "expected_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "correct_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "correct_dose_microgray_exact": "5/9",
+      "regrouped_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "incorrect_unweighted_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "incorrect_unweighted_relative_error_percent": "0",
+      "accounting": {
+        "rate_unit": "microgray/hour",
+        "dose_unit": "microgray",
+        "window_seconds": [
+          "0",
+          "1000"
+        ],
+        "covered_seconds": "1000",
+        "unobserved_seconds": "0",
+        "gaps": [],
+        "ledger": [
+          {
+            "record": 1,
+            "start_seconds": "0",
+            "end_seconds": "100",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 2,
+            "start_seconds": "100",
+            "end_seconds": "200",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 3,
+            "start_seconds": "200",
+            "end_seconds": "300",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 4,
+            "start_seconds": "300",
+            "end_seconds": "400",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 5,
+            "start_seconds": "400",
+            "end_seconds": "500",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 6,
+            "start_seconds": "500",
+            "end_seconds": "600",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 7,
+            "start_seconds": "600",
+            "end_seconds": "700",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 8,
+            "start_seconds": "700",
+            "end_seconds": "800",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 9,
+            "start_seconds": "800",
+            "end_seconds": "900",
+            "mean_rate": "2",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 10,
+            "start_seconds": "900",
+            "end_seconds": "920",
+            "mean_rate": "2",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.011111111111111111111111111111111111111111111111111",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.011111111111111111111111111111111111111111111111111"
+          },
+          {
+            "record": 11,
+            "start_seconds": "920",
+            "end_seconds": "940",
+            "mean_rate": "2",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.011111111111111111111111111111111111111111111111111",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.011111111111111111111111111111111111111111111111111"
+          },
+          {
+            "record": 12,
+            "start_seconds": "940",
+            "end_seconds": "960",
+            "mean_rate": "2",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.011111111111111111111111111111111111111111111111111",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.011111111111111111111111111111111111111111111111111"
+          },
+          {
+            "record": 13,
+            "start_seconds": "960",
+            "end_seconds": "980",
+            "mean_rate": "2",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.011111111111111111111111111111111111111111111111111",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.011111111111111111111111111111111111111111111111111"
+          },
+          {
+            "record": 14,
+            "start_seconds": "980",
+            "end_seconds": "1000",
+            "mean_rate": "2",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.011111111111111111111111111111111111111111111111111",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.011111111111111111111111111111111111111111111111111"
+          }
+        ],
+        "complete_interval_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+        "constant_allocation_estimate_microgray": "0.55555555555555555555555555555555555555555555555556",
+        "partial_bin_allocation": "none; complete intervals only",
+        "covered_support_dose_bounds_microgray": [
+          "0.55555555555555555555555555555555555555555555555556",
+          "0.55555555555555555555555555555555555555555555555556"
+        ],
+        "requested_window_dose_bounds_microgray": [
+          "0.55555555555555555555555555555555555555555555555556",
+          "0.55555555555555555555555555555555555555555555555556"
+        ]
+      }
+    },
+    {
+      "name": "linear",
+      "intervals": [
+        {
+          "start_seconds": 0,
+          "end_seconds": 100,
+          "mean_rate": "1.1"
+        },
+        {
+          "start_seconds": 100,
+          "end_seconds": 250,
+          "mean_rate": "1.35"
+        },
+        {
+          "start_seconds": 250,
+          "end_seconds": 500,
+          "mean_rate": "1.75"
+        },
+        {
+          "start_seconds": 500,
+          "end_seconds": 1000,
+          "mean_rate": "2.5"
+        }
+      ],
+      "expected_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "correct_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "correct_dose_microgray_exact": "5/9",
+      "regrouped_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+      "incorrect_unweighted_dose_microgray": "0.46527777777777777777777777777777777777777777777778",
+      "incorrect_unweighted_relative_error_percent": "-16.25",
+      "accounting": {
+        "rate_unit": "microgray/hour",
+        "dose_unit": "microgray",
+        "window_seconds": [
+          "0",
+          "1000"
+        ],
+        "covered_seconds": "1000",
+        "unobserved_seconds": "0",
+        "gaps": [],
+        "ledger": [
+          {
+            "record": 1,
+            "start_seconds": "0",
+            "end_seconds": "100",
+            "mean_rate": "1.1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.030555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.030555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 2,
+            "start_seconds": "100",
+            "end_seconds": "250",
+            "mean_rate": "1.35",
+            "duration_seconds": "150",
+            "full_interval_dose_microgray": "0.05625",
+            "covered_seconds_in_window": "150",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.05625"
+          },
+          {
+            "record": 3,
+            "start_seconds": "250",
+            "end_seconds": "500",
+            "mean_rate": "1.75",
+            "duration_seconds": "250",
+            "full_interval_dose_microgray": "0.12152777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "250",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.12152777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 4,
+            "start_seconds": "500",
+            "end_seconds": "1000",
+            "mean_rate": "2.5",
+            "duration_seconds": "500",
+            "full_interval_dose_microgray": "0.34722222222222222222222222222222222222222222222222",
+            "covered_seconds_in_window": "500",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.34722222222222222222222222222222222222222222222222"
+          }
+        ],
+        "complete_interval_dose_microgray": "0.55555555555555555555555555555555555555555555555556",
+        "constant_allocation_estimate_microgray": "0.55555555555555555555555555555555555555555555555556",
+        "partial_bin_allocation": "none; complete intervals only",
+        "covered_support_dose_bounds_microgray": [
+          "0.55555555555555555555555555555555555555555555555556",
+          "0.55555555555555555555555555555555555555555555555556"
+        ],
+        "requested_window_dose_bounds_microgray": [
+          "0.55555555555555555555555555555555555555555555555556",
+          "0.55555555555555555555555555555555555555555555555556"
+        ]
+      }
+    },
+    {
+      "name": "adaptive_pulse",
+      "intervals": [
+        {
+          "start_seconds": 0,
+          "end_seconds": 100,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 100,
+          "end_seconds": 200,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 200,
+          "end_seconds": 300,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 300,
+          "end_seconds": 400,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 400,
+          "end_seconds": 500,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 500,
+          "end_seconds": 600,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 600,
+          "end_seconds": 700,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 700,
+          "end_seconds": 800,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 800,
+          "end_seconds": 900,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 900,
+          "end_seconds": 920,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 920,
+          "end_seconds": 940,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 940,
+          "end_seconds": 960,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 960,
+          "end_seconds": 980,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 980,
+          "end_seconds": 1000,
+          "mean_rate": 10
+        }
+      ],
+      "expected_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+      "correct_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+      "correct_dose_microgray_exact": "19/36",
+      "regrouped_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+      "incorrect_unweighted_dose_microgray": "1.1706349206349206349206349206349206349206349206349",
+      "incorrect_unweighted_relative_error_percent": "121.80451127819548872180451127819548872180451127820",
+      "accounting": {
+        "rate_unit": "microgray/hour",
+        "dose_unit": "microgray",
+        "window_seconds": [
+          "0",
+          "1000"
+        ],
+        "covered_seconds": "1000",
+        "unobserved_seconds": "0",
+        "gaps": [],
+        "ledger": [
+          {
+            "record": 1,
+            "start_seconds": "0",
+            "end_seconds": "100",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 2,
+            "start_seconds": "100",
+            "end_seconds": "200",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 3,
+            "start_seconds": "200",
+            "end_seconds": "300",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 4,
+            "start_seconds": "300",
+            "end_seconds": "400",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 5,
+            "start_seconds": "400",
+            "end_seconds": "500",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 6,
+            "start_seconds": "500",
+            "end_seconds": "600",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 7,
+            "start_seconds": "600",
+            "end_seconds": "700",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 8,
+            "start_seconds": "700",
+            "end_seconds": "800",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 9,
+            "start_seconds": "800",
+            "end_seconds": "900",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 10,
+            "start_seconds": "900",
+            "end_seconds": "920",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 11,
+            "start_seconds": "920",
+            "end_seconds": "940",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 12,
+            "start_seconds": "940",
+            "end_seconds": "960",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 13,
+            "start_seconds": "960",
+            "end_seconds": "980",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 14,
+            "start_seconds": "980",
+            "end_seconds": "1000",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          }
+        ],
+        "complete_interval_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+        "constant_allocation_estimate_microgray": "0.52777777777777777777777777777777777777777777777778",
+        "partial_bin_allocation": "none; complete intervals only",
+        "covered_support_dose_bounds_microgray": [
+          "0.52777777777777777777777777777777777777777777777778",
+          "0.52777777777777777777777777777777777777777777777778"
+        ],
+        "requested_window_dose_bounds_microgray": [
+          "0.52777777777777777777777777777777777777777777777778",
+          "0.52777777777777777777777777777777777777777777777778"
+        ]
+      }
+    },
+    {
+      "name": "narrow_peak_boundary",
+      "signal": "100 microgray/hour on [45,55); zero elsewhere on [0,100)",
+      "cases": [
+        {
+          "bin_edges_seconds": [
+            0,
+            50,
+            100
+          ],
+          "window_seconds": [
+            0,
+            48
+          ],
+          "analytic_partial_dose_microgray": "0.083333333333333333333333333333333333333333333333333",
+          "full_bin_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "48"
+            ],
+            "covered_seconds": "48",
+            "unobserved_seconds": "0",
+            "gaps": [],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "0",
+                "end_seconds": "50",
+                "mean_rate": "10",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.13888888888888888888888888888888888888888888888889",
+                "covered_seconds_in_window": "48",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.13333333333333333333333333333333333333333333333333"
+              },
+              {
+                "record": 2,
+                "start_seconds": "50",
+                "end_seconds": "100",
+                "mean_rate": "10",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.13888888888888888888888888888888888888888888888889",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0",
+            "constant_allocation_estimate_microgray": "0.13333333333333333333333333333333333333333333333333",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0",
+              "0.13888888888888888888888888888888888888888888888889"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0",
+              "0.13888888888888888888888888888888888888888888888889"
+            ]
+          }
+        },
+        {
+          "bin_edges_seconds": [
+            0,
+            50,
+            100
+          ],
+          "window_seconds": [
+            0,
+            52
+          ],
+          "analytic_partial_dose_microgray": "0.19444444444444444444444444444444444444444444444444",
+          "full_bin_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "52"
+            ],
+            "covered_seconds": "52",
+            "unobserved_seconds": "0",
+            "gaps": [],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "0",
+                "end_seconds": "50",
+                "mean_rate": "10",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.13888888888888888888888888888888888888888888888889",
+                "covered_seconds_in_window": "50",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.13888888888888888888888888888888888888888888888889"
+              },
+              {
+                "record": 2,
+                "start_seconds": "50",
+                "end_seconds": "100",
+                "mean_rate": "10",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.13888888888888888888888888888888888888888888888889",
+                "covered_seconds_in_window": "2",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.0055555555555555555555555555555555555555555555555556"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.13888888888888888888888888888888888888888888888889",
+            "constant_allocation_estimate_microgray": "0.14444444444444444444444444444444444444444444444444",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0.13888888888888888888888888888888888888888888888889",
+              "0.27777777777777777777777777777777777777777777777778"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.13888888888888888888888888888888888888888888888889",
+              "0.27777777777777777777777777777777777777777777777778"
+            ]
+          }
+        },
+        {
+          "bin_edges_seconds": [
+            0,
+            20,
+            70,
+            100
+          ],
+          "window_seconds": [
+            0,
+            48
+          ],
+          "analytic_partial_dose_microgray": "0.083333333333333333333333333333333333333333333333333",
+          "full_bin_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "48"
+            ],
+            "covered_seconds": "48",
+            "unobserved_seconds": "0",
+            "gaps": [],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "0",
+                "end_seconds": "20",
+                "mean_rate": "0",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 2,
+                "start_seconds": "20",
+                "end_seconds": "70",
+                "mean_rate": "20",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "28",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.15555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 3,
+                "start_seconds": "70",
+                "end_seconds": "100",
+                "mean_rate": "0",
+                "duration_seconds": "30",
+                "full_interval_dose_microgray": "0",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0",
+            "constant_allocation_estimate_microgray": "0.15555555555555555555555555555555555555555555555556",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0",
+              "0.27777777777777777777777777777777777777777777777778"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0",
+              "0.27777777777777777777777777777777777777777777777778"
+            ]
+          }
+        },
+        {
+          "bin_edges_seconds": [
+            0,
+            20,
+            70,
+            100
+          ],
+          "window_seconds": [
+            0,
+            52
+          ],
+          "analytic_partial_dose_microgray": "0.19444444444444444444444444444444444444444444444444",
+          "full_bin_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "52"
+            ],
+            "covered_seconds": "52",
+            "unobserved_seconds": "0",
+            "gaps": [],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "0",
+                "end_seconds": "20",
+                "mean_rate": "0",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 2,
+                "start_seconds": "20",
+                "end_seconds": "70",
+                "mean_rate": "20",
+                "duration_seconds": "50",
+                "full_interval_dose_microgray": "0.27777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "32",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.17777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "70",
+                "end_seconds": "100",
+                "mean_rate": "0",
+                "duration_seconds": "30",
+                "full_interval_dose_microgray": "0",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0",
+            "constant_allocation_estimate_microgray": "0.17777777777777777777777777777777777777777777777778",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0",
+              "0.27777777777777777777777777777777777777777777777778"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0",
+              "0.27777777777777777777777777777777777777777777777778"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "missing_conflicting",
+      "accounting": {
+        "rate_unit": "microgray/hour",
+        "dose_unit": "microgray",
+        "window_seconds": [
+          "0",
+          "1000"
+        ],
+        "covered_seconds": "880",
+        "unobserved_seconds": "120",
+        "gaps": [
+          {
+            "start_seconds": "400",
+            "end_seconds": "500",
+            "duration_seconds": "100"
+          },
+          {
+            "start_seconds": "940",
+            "end_seconds": "960",
+            "duration_seconds": "20"
+          }
+        ],
+        "ledger": [
+          {
+            "record": 1,
+            "start_seconds": "0",
+            "end_seconds": "100",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 2,
+            "start_seconds": "100",
+            "end_seconds": "200",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 3,
+            "start_seconds": "200",
+            "end_seconds": "300",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 4,
+            "start_seconds": "300",
+            "end_seconds": "400",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 5,
+            "start_seconds": "500",
+            "end_seconds": "600",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 6,
+            "start_seconds": "600",
+            "end_seconds": "700",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 7,
+            "start_seconds": "700",
+            "end_seconds": "800",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 8,
+            "start_seconds": "800",
+            "end_seconds": "900",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 9,
+            "start_seconds": "900",
+            "end_seconds": "920",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 10,
+            "start_seconds": "920",
+            "end_seconds": "940",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 11,
+            "start_seconds": "960",
+            "end_seconds": "980",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 12,
+            "start_seconds": "980",
+            "end_seconds": "1000",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          }
+        ],
+        "complete_interval_dose_microgray": "0.44444444444444444444444444444444444444444444444444",
+        "constant_allocation_estimate_microgray": "0.44444444444444444444444444444444444444444444444444",
+        "partial_bin_allocation": "none; complete intervals only",
+        "covered_support_dose_bounds_microgray": [
+          "0.44444444444444444444444444444444444444444444444444",
+          "0.44444444444444444444444444444444444444444444444444"
+        ],
+        "requested_window_dose_bounds_microgray": [
+          "0.44444444444444444444444444444444444444444444444444",
+          null
+        ]
+      },
+      "conflicting_input": [
+        {
+          "start_seconds": 0,
+          "end_seconds": 100,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 100,
+          "end_seconds": 200,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 200,
+          "end_seconds": 300,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 300,
+          "end_seconds": 400,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 400,
+          "end_seconds": 500,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 500,
+          "end_seconds": 600,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 600,
+          "end_seconds": 700,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 700,
+          "end_seconds": 800,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 800,
+          "end_seconds": 900,
+          "mean_rate": 1
+        },
+        {
+          "start_seconds": 900,
+          "end_seconds": 920,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 900,
+          "end_seconds": 920,
+          "mean_rate": 99
+        },
+        {
+          "start_seconds": 920,
+          "end_seconds": 940,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 940,
+          "end_seconds": 960,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 960,
+          "end_seconds": 980,
+          "mean_rate": 10
+        },
+        {
+          "start_seconds": 980,
+          "end_seconds": 1000,
+          "mean_rate": 10
+        }
+      ],
+      "conflicting_input_rejection": "conflicting interval at record 11; entire input rejected",
+      "compatible_gap_completions": [
+        {
+          "gap_rate_microgray_per_hour": 0,
+          "full_window_dose_microgray": "0.44444444444444444444444444444444444444444444444444"
+        },
+        {
+          "gap_rate_microgray_per_hour": 100,
+          "full_window_dose_microgray": "3.7777777777777777777777777777777777777777777777778"
+        }
+      ],
+      "unobserved_gap_upper_bound_microgray": null
+    },
+    {
+      "name": "gain_clocks",
+      "independent_calibration_intervals": {
+        "series_a": [
+          {
+            "start_seconds": -200,
+            "end_seconds": -100,
+            "mean_rate": 3
+          }
+        ],
+        "series_b": [
+          {
+            "start_seconds": -200,
+            "end_seconds": -100,
+            "mean_rate": 6
+          }
+        ]
+      },
+      "frozen_gain_factor": "2",
+      "imposed_clock_offset_seconds": 60,
+      "held_out_scaled_dose_microgray": "1.0555555555555555555555555555555555555555555555556",
+      "gain_corrected_complete_span_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+      "known_clock_corrected_accounting": {
+        "rate_unit": "microgray/hour",
+        "dose_unit": "microgray",
+        "window_seconds": [
+          "0",
+          "1000"
+        ],
+        "covered_seconds": "1000",
+        "unobserved_seconds": "0",
+        "gaps": [],
+        "ledger": [
+          {
+            "record": 1,
+            "start_seconds": "0",
+            "end_seconds": "100",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 2,
+            "start_seconds": "100",
+            "end_seconds": "200",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 3,
+            "start_seconds": "200",
+            "end_seconds": "300",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 4,
+            "start_seconds": "300",
+            "end_seconds": "400",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 5,
+            "start_seconds": "400",
+            "end_seconds": "500",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 6,
+            "start_seconds": "500",
+            "end_seconds": "600",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 7,
+            "start_seconds": "600",
+            "end_seconds": "700",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 8,
+            "start_seconds": "700",
+            "end_seconds": "800",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 9,
+            "start_seconds": "800",
+            "end_seconds": "900",
+            "mean_rate": "1",
+            "duration_seconds": "100",
+            "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+            "covered_seconds_in_window": "100",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+          },
+          {
+            "record": 10,
+            "start_seconds": "900",
+            "end_seconds": "920",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 11,
+            "start_seconds": "920",
+            "end_seconds": "940",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 12,
+            "start_seconds": "940",
+            "end_seconds": "960",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 13,
+            "start_seconds": "960",
+            "end_seconds": "980",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          },
+          {
+            "record": 14,
+            "start_seconds": "980",
+            "end_seconds": "1000",
+            "mean_rate": "10",
+            "duration_seconds": "20",
+            "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+            "covered_seconds_in_window": "20",
+            "complete_interval_in_window": true,
+            "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+          }
+        ],
+        "complete_interval_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+        "constant_allocation_estimate_microgray": "0.52777777777777777777777777777777777777777777777778",
+        "partial_bin_allocation": "none; complete intervals only",
+        "covered_support_dose_bounds_microgray": [
+          "0.52777777777777777777777777777777777777777777777778",
+          "0.52777777777777777777777777777777777777777777777778"
+        ],
+        "requested_window_dose_bounds_microgray": [
+          "0.52777777777777777777777777777777777777777777777778",
+          "0.52777777777777777777777777777777777777777777777778"
+        ]
+      },
+      "clock_scenarios": [
+        {
+          "applied_shift_seconds": -60,
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "1000"
+            ],
+            "covered_seconds": "1000",
+            "unobserved_seconds": "0",
+            "gaps": [],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "0",
+                "end_seconds": "100",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 2,
+                "start_seconds": "100",
+                "end_seconds": "200",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "200",
+                "end_seconds": "300",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 4,
+                "start_seconds": "300",
+                "end_seconds": "400",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 5,
+                "start_seconds": "400",
+                "end_seconds": "500",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 6,
+                "start_seconds": "500",
+                "end_seconds": "600",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 7,
+                "start_seconds": "600",
+                "end_seconds": "700",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 8,
+                "start_seconds": "700",
+                "end_seconds": "800",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 9,
+                "start_seconds": "800",
+                "end_seconds": "900",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 10,
+                "start_seconds": "900",
+                "end_seconds": "920",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 11,
+                "start_seconds": "920",
+                "end_seconds": "940",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 12,
+                "start_seconds": "940",
+                "end_seconds": "960",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 13,
+                "start_seconds": "960",
+                "end_seconds": "980",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 14,
+                "start_seconds": "980",
+                "end_seconds": "1000",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.52777777777777777777777777777777777777777777777778",
+            "constant_allocation_estimate_microgray": "0.52777777777777777777777777777777777777777777777778",
+            "partial_bin_allocation": "none; complete intervals only",
+            "covered_support_dose_bounds_microgray": [
+              "0.52777777777777777777777777777777777777777777777778",
+              "0.52777777777777777777777777777777777777777777777778"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.52777777777777777777777777777777777777777777777778",
+              "0.52777777777777777777777777777777777777777777777778"
+            ]
+          }
+        },
+        {
+          "applied_shift_seconds": -30,
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "1000"
+            ],
+            "covered_seconds": "970",
+            "unobserved_seconds": "30",
+            "gaps": [
+              {
+                "start_seconds": "0",
+                "end_seconds": "30",
+                "duration_seconds": "30"
+              }
+            ],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "30",
+                "end_seconds": "130",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 2,
+                "start_seconds": "130",
+                "end_seconds": "230",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "230",
+                "end_seconds": "330",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 4,
+                "start_seconds": "330",
+                "end_seconds": "430",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 5,
+                "start_seconds": "430",
+                "end_seconds": "530",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 6,
+                "start_seconds": "530",
+                "end_seconds": "630",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 7,
+                "start_seconds": "630",
+                "end_seconds": "730",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 8,
+                "start_seconds": "730",
+                "end_seconds": "830",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 9,
+                "start_seconds": "830",
+                "end_seconds": "930",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 10,
+                "start_seconds": "930",
+                "end_seconds": "950",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 11,
+                "start_seconds": "950",
+                "end_seconds": "970",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 12,
+                "start_seconds": "970",
+                "end_seconds": "990",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 13,
+                "start_seconds": "990",
+                "end_seconds": "1010",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "10",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 14,
+                "start_seconds": "1010",
+                "end_seconds": "1030",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.41666666666666666666666666666666666666666666666667",
+            "constant_allocation_estimate_microgray": "0.44444444444444444444444444444444444444444444444444",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0.41666666666666666666666666666666666666666666666667",
+              "0.47222222222222222222222222222222222222222222222222"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.41666666666666666666666666666666666666666666666667",
+              null
+            ]
+          }
+        },
+        {
+          "applied_shift_seconds": 0,
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "1000"
+            ],
+            "covered_seconds": "940",
+            "unobserved_seconds": "60",
+            "gaps": [
+              {
+                "start_seconds": "0",
+                "end_seconds": "60",
+                "duration_seconds": "60"
+              }
+            ],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "60",
+                "end_seconds": "160",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 2,
+                "start_seconds": "160",
+                "end_seconds": "260",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "260",
+                "end_seconds": "360",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 4,
+                "start_seconds": "360",
+                "end_seconds": "460",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 5,
+                "start_seconds": "460",
+                "end_seconds": "560",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 6,
+                "start_seconds": "560",
+                "end_seconds": "660",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 7,
+                "start_seconds": "660",
+                "end_seconds": "760",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 8,
+                "start_seconds": "760",
+                "end_seconds": "860",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 9,
+                "start_seconds": "860",
+                "end_seconds": "960",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 10,
+                "start_seconds": "960",
+                "end_seconds": "980",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 11,
+                "start_seconds": "980",
+                "end_seconds": "1000",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "20",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.055555555555555555555555555555555555555555555555556"
+              },
+              {
+                "record": 12,
+                "start_seconds": "1000",
+                "end_seconds": "1020",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 13,
+                "start_seconds": "1020",
+                "end_seconds": "1040",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 14,
+                "start_seconds": "1040",
+                "end_seconds": "1060",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.36111111111111111111111111111111111111111111111111",
+            "constant_allocation_estimate_microgray": "0.36111111111111111111111111111111111111111111111111",
+            "partial_bin_allocation": "none; complete intervals only",
+            "covered_support_dose_bounds_microgray": [
+              "0.36111111111111111111111111111111111111111111111111",
+              "0.36111111111111111111111111111111111111111111111111"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.36111111111111111111111111111111111111111111111111",
+              null
+            ]
+          }
+        },
+        {
+          "applied_shift_seconds": 30,
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "1000"
+            ],
+            "covered_seconds": "910",
+            "unobserved_seconds": "90",
+            "gaps": [
+              {
+                "start_seconds": "0",
+                "end_seconds": "90",
+                "duration_seconds": "90"
+              }
+            ],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "90",
+                "end_seconds": "190",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 2,
+                "start_seconds": "190",
+                "end_seconds": "290",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "290",
+                "end_seconds": "390",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 4,
+                "start_seconds": "390",
+                "end_seconds": "490",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 5,
+                "start_seconds": "490",
+                "end_seconds": "590",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 6,
+                "start_seconds": "590",
+                "end_seconds": "690",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 7,
+                "start_seconds": "690",
+                "end_seconds": "790",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 8,
+                "start_seconds": "790",
+                "end_seconds": "890",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 9,
+                "start_seconds": "890",
+                "end_seconds": "990",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 10,
+                "start_seconds": "990",
+                "end_seconds": "1010",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "10",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 11,
+                "start_seconds": "1010",
+                "end_seconds": "1030",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 12,
+                "start_seconds": "1030",
+                "end_seconds": "1050",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 13,
+                "start_seconds": "1050",
+                "end_seconds": "1070",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 14,
+                "start_seconds": "1070",
+                "end_seconds": "1090",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.25",
+            "constant_allocation_estimate_microgray": "0.27777777777777777777777777777777777777777777777778",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0.25",
+              "0.30555555555555555555555555555555555555555555555556"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.25",
+              null
+            ]
+          }
+        },
+        {
+          "applied_shift_seconds": 60,
+          "accounting": {
+            "rate_unit": "microgray/hour",
+            "dose_unit": "microgray",
+            "window_seconds": [
+              "0",
+              "1000"
+            ],
+            "covered_seconds": "880",
+            "unobserved_seconds": "120",
+            "gaps": [
+              {
+                "start_seconds": "0",
+                "end_seconds": "120",
+                "duration_seconds": "120"
+              }
+            ],
+            "ledger": [
+              {
+                "record": 1,
+                "start_seconds": "120",
+                "end_seconds": "220",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 2,
+                "start_seconds": "220",
+                "end_seconds": "320",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 3,
+                "start_seconds": "320",
+                "end_seconds": "420",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 4,
+                "start_seconds": "420",
+                "end_seconds": "520",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 5,
+                "start_seconds": "520",
+                "end_seconds": "620",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 6,
+                "start_seconds": "620",
+                "end_seconds": "720",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 7,
+                "start_seconds": "720",
+                "end_seconds": "820",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 8,
+                "start_seconds": "820",
+                "end_seconds": "920",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "100",
+                "complete_interval_in_window": true,
+                "constant_allocation_microgray": "0.027777777777777777777777777777777777777777777777778"
+              },
+              {
+                "record": 9,
+                "start_seconds": "920",
+                "end_seconds": "1020",
+                "mean_rate": "1",
+                "duration_seconds": "100",
+                "full_interval_dose_microgray": "0.027777777777777777777777777777777777777777777777778",
+                "covered_seconds_in_window": "80",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0.022222222222222222222222222222222222222222222222222"
+              },
+              {
+                "record": 10,
+                "start_seconds": "1020",
+                "end_seconds": "1040",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 11,
+                "start_seconds": "1040",
+                "end_seconds": "1060",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 12,
+                "start_seconds": "1060",
+                "end_seconds": "1080",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 13,
+                "start_seconds": "1080",
+                "end_seconds": "1100",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              },
+              {
+                "record": 14,
+                "start_seconds": "1100",
+                "end_seconds": "1120",
+                "mean_rate": "10",
+                "duration_seconds": "20",
+                "full_interval_dose_microgray": "0.055555555555555555555555555555555555555555555555556",
+                "covered_seconds_in_window": "0",
+                "complete_interval_in_window": false,
+                "constant_allocation_microgray": "0"
+              }
+            ],
+            "complete_interval_dose_microgray": "0.22222222222222222222222222222222222222222222222222",
+            "constant_allocation_estimate_microgray": "0.24444444444444444444444444444444444444444444444444",
+            "partial_bin_allocation": "piecewise-constant assumption",
+            "covered_support_dose_bounds_microgray": [
+              "0.22222222222222222222222222222222222222222222222222",
+              "0.25"
+            ],
+            "requested_window_dose_bounds_microgray": [
+              "0.22222222222222222222222222222222222222222222222222",
+              null
+            ]
+          }
+        }
+      ],
+      "missing_exposure_after_gain_correction": "120"
+    }
+  ]
+}

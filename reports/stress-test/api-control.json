@@ -1,0 +1,12 @@
+{
+  "instrument_id": "DosTel2",
+  "day": "2022-04-01",
+  "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-01T00%3A00&timestamp%3C2022-04-02T00%3A00&absorbed_dose_rate&format=csv",
+  "retrieval_date_utc": "2026-10-08",
+  "http_status": 200,
+  "source_rows": 1197,
+  "bytes": 52376,
+  "sha256": "589739e2e84e53ce9287156a88d54941414833d242e967ad0ec1e52f1a3f56d7",
+  "matches_frozen_baseline": true,
+  "purpose": "Known populated date queried once after all28 prespecified dates returned empty CSVs; not a replacement sample"
+}

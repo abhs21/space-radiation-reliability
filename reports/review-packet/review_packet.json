@@ -1,0 +1,3859 @@
+{
+  "title": "RadLab reading review",
+  "source_set_sha256": "c82cce694786e649b650aef1f28d0a9b66fa462c6d0c367ec72d413701fe63c3",
+  "sort_basis": "Descending absolute difference between the largest and smallest rate in a group; not scientific severity",
+  "summary": {
+    "source_cases": 18,
+    "source_rows": 21500,
+    "differing_rate_groups": 58,
+    "readings_in_differing_rate_groups": 116,
+    "comparable_groups": 58,
+    "unavailable_groups": 0,
+    "tied_groups": 0,
+    "closest_source_position_counts": {
+      "1": 53,
+      "2": 5
+    },
+    "instrument_days_with_differing_rates": 16,
+    "calendar_days_with_differing_rates": 9,
+    "median_pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+    "median_post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+    "calculation": "Linear interpolation between the nearest distinct timestamp groups with unambiguous rates",
+    "numeric_export": "Computed values are decimal strings rounded to 50 significant digits; comparisons use exact fractions",
+    "interpretation": "Descriptive local-trend comparison only; source order is not acquisition order or evidence of physical correctness",
+    "cases": [
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-03-01",
+        "source_file": "dostel1-2022-03-01.csv",
+        "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1202,
+        "unique_timestamp_instants": 1198,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "89",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-01",
+        "source_file": "dostel1-2022-04-01.csv",
+        "sha256": "d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1192,
+        "unique_timestamp_instants": 1189,
+        "differing_rate_groups": 3,
+        "comparable_groups": 3,
+        "typical_gap_seconds": "90",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-02",
+        "source_file": "dostel1-2022-04-02.csv",
+        "sha256": "f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1193,
+        "unique_timestamp_instants": 1189,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "88",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-03",
+        "source_file": "dostel1-2022-04-03.csv",
+        "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1196,
+        "unique_timestamp_instants": 1190,
+        "differing_rate_groups": 6,
+        "comparable_groups": 6,
+        "typical_gap_seconds": "87",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-04",
+        "source_file": "dostel1-2022-04-04.csv",
+        "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1199,
+        "unique_timestamp_instants": 1194,
+        "differing_rate_groups": 5,
+        "comparable_groups": 5,
+        "typical_gap_seconds": "89",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-05",
+        "source_file": "dostel1-2022-04-05.csv",
+        "sha256": "c01158fff753094433b808fff766254af9df32efc73c4a0048ca983f8e914ac1",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1201,
+        "unique_timestamp_instants": 1199,
+        "differing_rate_groups": 2,
+        "comparable_groups": 2,
+        "typical_gap_seconds": "85",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-06",
+        "source_file": "dostel1-2022-04-06.csv",
+        "sha256": "8e3923756ea58e6cb92bd0010dd30a5f626abcfd401be8c15349856e28a1772f",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1202,
+        "unique_timestamp_instants": 1200,
+        "differing_rate_groups": 2,
+        "comparable_groups": 2,
+        "typical_gap_seconds": "87",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-07",
+        "source_file": "dostel1-2022-04-07.csv",
+        "sha256": "df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1196,
+        "unique_timestamp_instants": 1192,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "88",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel1",
+        "day": "2022-04-08",
+        "source_file": "dostel1-2022-04-08.csv",
+        "sha256": "36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1212,
+        "unique_timestamp_instants": 1208,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "86",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-03-01",
+        "source_file": "dostel2-2022-03-01.csv",
+        "sha256": "96f5ab1869d68a7b41a369704d4ebd348d1155f6789dc58813c82b0fc98600cf",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1187,
+        "unique_timestamp_instants": 1187,
+        "differing_rate_groups": 0,
+        "comparable_groups": 0,
+        "typical_gap_seconds": "92.5",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-01",
+        "source_file": "dostel2-2022-04-01.csv",
+        "sha256": "589739e2e84e53ce9287156a88d54941414833d242e967ad0ec1e52f1a3f56d7",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1197,
+        "unique_timestamp_instants": 1197,
+        "differing_rate_groups": 0,
+        "comparable_groups": 0,
+        "typical_gap_seconds": "92",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-02",
+        "source_file": "dostel2-2022-04-02.csv",
+        "sha256": "b1c9b1477cdb0b2e5e40baf3577cee13254ccf4926c59c83866f6537c005fbe3",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1192,
+        "unique_timestamp_instants": 1191,
+        "differing_rate_groups": 1,
+        "comparable_groups": 1,
+        "typical_gap_seconds": "93",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-03",
+        "source_file": "dostel2-2022-04-03.csv",
+        "sha256": "2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1192,
+        "unique_timestamp_instants": 1188,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "92",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-04",
+        "source_file": "dostel2-2022-04-04.csv",
+        "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1166,
+        "unique_timestamp_instants": 1161,
+        "differing_rate_groups": 5,
+        "comparable_groups": 5,
+        "typical_gap_seconds": "93",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-05",
+        "source_file": "dostel2-2022-04-05.csv",
+        "sha256": "b27e893317dfa1fce278707239560a7726af86919e5a9492f64311178002dfad",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1190,
+        "unique_timestamp_instants": 1188,
+        "differing_rate_groups": 2,
+        "comparable_groups": 2,
+        "typical_gap_seconds": "88",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-06",
+        "source_file": "dostel2-2022-04-06.csv",
+        "sha256": "548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1193,
+        "unique_timestamp_instants": 1189,
+        "differing_rate_groups": 4,
+        "comparable_groups": 4,
+        "typical_gap_seconds": "88",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-07",
+        "source_file": "dostel2-2022-04-07.csv",
+        "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1190,
+        "unique_timestamp_instants": 1184,
+        "differing_rate_groups": 6,
+        "comparable_groups": 6,
+        "typical_gap_seconds": "89",
+        "out_of_order_transitions": 0
+      },
+      {
+        "instrument_id": "DosTel2",
+        "day": "2022-04-08",
+        "source_file": "dostel2-2022-04-08.csv",
+        "sha256": "a1f17ffad747f5d169a01faf4d074aebd0df96675fef6b7c65f0c1569bac5c07",
+        "timezone_convention": "not_supplied",
+        "source_rows": 1200,
+        "unique_timestamp_instants": 1198,
+        "differing_rate_groups": 2,
+        "comparable_groups": 2,
+        "typical_gap_seconds": "88",
+        "out_of_order_transitions": 0
+      }
+    ]
+  },
+  "groups": [
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T02:30:00",
+        "2022-04-03T02:30:00"
+      ],
+      "source_rows": [
+        131,
+        132
+      ],
+      "rates_microgray_per_hour": [
+        "283.136608814696",
+        "316.611862"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T02:29:40"
+        ],
+        "source_rows": [
+          130
+        ],
+        "rates_microgray_per_hour": [
+          "347.110328"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T02:30:20"
+        ],
+        "source_rows": [
+          133
+        ],
+        "rates_microgray_per_hour": [
+          "279.113507"
+        ]
+      },
+      "pre_gap_seconds": "20",
+      "post_gap_seconds": "20",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "0.22988505747126436781609195402298850574712643678161",
+      "post_gap_vs_typical": "0.22988505747126436781609195402298850574712643678161",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "313.1119175",
+      "absolute_differences_microgray_per_hour": [
+        "29.975308685304",
+        "3.4999445"
+      ],
+      "closest_source_positions": [
+        2
+      ],
+      "closest_source_rows": [
+        132
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/131,132",
+      "rate_range_microgray_per_hour": "33.475253185304"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-02",
+      "source_file": "dostel2-2022-04-02.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-02T00%3A00&timestamp%3C2022-04-03T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b1c9b1477cdb0b2e5e40baf3577cee13254ccf4926c59c83866f6537c005fbe3",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-02T13:05:00",
+        "2022-04-02T13:05:00"
+      ],
+      "source_rows": [
+        675,
+        676
+      ],
+      "rates_microgray_per_hour": [
+        "242.359033",
+        "269.134563"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-02T13:04:40"
+        ],
+        "source_rows": [
+          674
+        ],
+        "rates_microgray_per_hour": [
+          "324.713369"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-02T13:05:20"
+        ],
+        "source_rows": [
+          677
+        ],
+        "rates_microgray_per_hour": [
+          "242.948509"
+        ]
+      },
+      "pre_gap_seconds": "20",
+      "post_gap_seconds": "20",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "0.21505376344086021505376344086021505376344086021505",
+      "post_gap_vs_typical": "0.21505376344086021505376344086021505376344086021505",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "283.830939",
+      "absolute_differences_microgray_per_hour": [
+        "41.471906",
+        "14.696376"
+      ],
+      "closest_source_positions": [
+        2
+      ],
+      "closest_source_rows": [
+        676
+      ],
+      "group_key": "dostel2-2022-04-02.csv/b1c9b1477cdb0b2e5e40baf3577cee13254ccf4926c59c83866f6537c005fbe3/675,676",
+      "rate_range_microgray_per_hour": "26.77553"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-02",
+      "source_file": "dostel1-2022-04-02.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-02T00%3A00&timestamp%3C2022-04-03T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-02T11:30:00",
+        "2022-04-02T11:30:00"
+      ],
+      "source_rows": [
+        599,
+        600
+      ],
+      "rates_microgray_per_hour": [
+        "65.0621378292683",
+        "77.902447"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-02T11:29:40"
+        ],
+        "source_rows": [
+          598
+        ],
+        "rates_microgray_per_hour": [
+          "112.537949"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-02T11:30:20"
+        ],
+        "source_rows": [
+          601
+        ],
+        "rates_microgray_per_hour": [
+          "67.069967"
+        ]
+      },
+      "pre_gap_seconds": "20",
+      "post_gap_seconds": "20",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "0.22727272727272727272727272727272727272727272727273",
+      "post_gap_vs_typical": "0.22727272727272727272727272727272727272727272727273",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "89.803958",
+      "absolute_differences_microgray_per_hour": [
+        "24.7418201707317",
+        "11.901511"
+      ],
+      "closest_source_positions": [
+        2
+      ],
+      "closest_source_rows": [
+        600
+      ],
+      "group_key": "dostel1-2022-04-02.csv/f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b/599,600",
+      "rate_range_microgray_per_hour": "12.8403091707317"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-08",
+      "source_file": "dostel1-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T08:20:00",
+        "2022-04-08T08:20:00"
+      ],
+      "source_rows": [
+        445,
+        446
+      ],
+      "rates_microgray_per_hour": [
+        "17.0798001214058",
+        "10.193612"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T08:18:20"
+        ],
+        "source_rows": [
+          444
+        ],
+        "rates_microgray_per_hour": [
+          "39.43984"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T08:21:40"
+        ],
+        "source_rows": [
+          447
+        ],
+        "rates_microgray_per_hour": [
+          "3.386126"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "86",
+      "pre_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "post_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "21.412983",
+      "absolute_differences_microgray_per_hour": [
+        "4.3331828785942",
+        "11.219371"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        445
+      ],
+      "group_key": "dostel1-2022-04-08.csv/36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90/445,446",
+      "rate_range_microgray_per_hour": "6.8861881214058"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-02",
+      "source_file": "dostel1-2022-04-02.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-02T00%3A00&timestamp%3C2022-04-03T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-02T01:45:00",
+        "2022-04-02T01:45:00"
+      ],
+      "source_rows": [
+        87,
+        88
+      ],
+      "rates_microgray_per_hour": [
+        "39.4006318522727",
+        "45.520525"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-02T01:44:40"
+        ],
+        "source_rows": [
+          86
+        ],
+        "rates_microgray_per_hour": [
+          "51.173211"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-02T01:45:20"
+        ],
+        "source_rows": [
+          89
+        ],
+        "rates_microgray_per_hour": [
+          "38.013359"
+        ]
+      },
+      "pre_gap_seconds": "20",
+      "post_gap_seconds": "20",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "0.22727272727272727272727272727272727272727272727273",
+      "post_gap_vs_typical": "0.22727272727272727272727272727272727272727272727273",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "44.593285",
+      "absolute_differences_microgray_per_hour": [
+        "5.1926531477273",
+        "0.92724"
+      ],
+      "closest_source_positions": [
+        2
+      ],
+      "closest_source_rows": [
+        88
+      ],
+      "group_key": "dostel1-2022-04-02.csv/f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b/87,88",
+      "rate_range_microgray_per_hour": "6.1198931477273"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_file": "dostel2-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T09:55:00",
+        "2022-04-04T09:55:00"
+      ],
+      "source_rows": [
+        500,
+        501
+      ],
+      "rates_microgray_per_hour": [
+        "23.591046",
+        "29.193037"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T09:53:20"
+        ],
+        "source_rows": [
+          499
+        ],
+        "rates_microgray_per_hour": [
+          "31.658999"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T09:56:40"
+        ],
+        "source_rows": [
+          502
+        ],
+        "rates_microgray_per_hour": [
+          "9.921102"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "post_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "20.7900505",
+      "absolute_differences_microgray_per_hour": [
+        "2.8009955",
+        "8.4029865"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        500
+      ],
+      "group_key": "dostel2-2022-04-04.csv/98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452/500,501",
+      "rate_range_microgray_per_hour": "5.601991"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-08",
+      "source_file": "dostel1-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T08:15:00",
+        "2022-04-08T08:15:00"
+      ],
+      "source_rows": [
+        441,
+        442
+      ],
+      "rates_microgray_per_hour": [
+        "35.819278",
+        "38.451403"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T08:13:20"
+        ],
+        "source_rows": [
+          440
+        ],
+        "rates_microgray_per_hour": [
+          "20.941482"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T08:16:40"
+        ],
+        "source_rows": [
+          443
+        ],
+        "rates_microgray_per_hour": [
+          "48.064949"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "86",
+      "pre_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "post_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "34.5032155",
+      "absolute_differences_microgray_per_hour": [
+        "1.3160625",
+        "3.9481875"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        441
+      ],
+      "group_key": "dostel1-2022-04-08.csv/36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90/441,442",
+      "rate_range_microgray_per_hour": "2.632125"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T00:30:00",
+        "2022-04-07T00:30:00"
+      ],
+      "source_rows": [
+        25,
+        26
+      ],
+      "rates_microgray_per_hour": [
+        "8.92838112460064",
+        "10.745254"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T00:28:20"
+        ],
+        "source_rows": [
+          24
+        ],
+        "rates_microgray_per_hour": [
+          "9.035782"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T00:31:40"
+        ],
+        "source_rows": [
+          27
+        ],
+        "rates_microgray_per_hour": [
+          "7.225484"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "8.130633",
+      "absolute_differences_microgray_per_hour": [
+        "0.79774812460064",
+        "2.614621"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        25
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/25,26",
+      "rate_range_microgray_per_hour": "1.81687287539936"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-06",
+      "source_file": "dostel1-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "8e3923756ea58e6cb92bd0010dd30a5f626abcfd401be8c15349856e28a1772f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T11:20:00",
+        "2022-04-06T11:20:00"
+      ],
+      "source_rows": [
+        597,
+        598
+      ],
+      "rates_microgray_per_hour": [
+        "5.57714827795527",
+        "3.967041"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T11:18:20"
+        ],
+        "source_rows": [
+          596
+        ],
+        "rates_microgray_per_hour": [
+          "3.222313"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T11:21:40"
+        ],
+        "source_rows": [
+          599
+        ],
+        "rates_microgray_per_hour": [
+          "9.085947"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.15413",
+      "absolute_differences_microgray_per_hour": [
+        "0.57698172204473",
+        "2.187089"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        597
+      ],
+      "group_key": "dostel1-2022-04-06.csv/8e3923756ea58e6cb92bd0010dd30a5f626abcfd401be8c15349856e28a1772f/597,598",
+      "rate_range_microgray_per_hour": "1.61010727795527"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_file": "dostel2-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T09:50:00",
+        "2022-04-04T09:50:00"
+      ],
+      "source_rows": [
+        496,
+        497
+      ],
+      "rates_microgray_per_hour": [
+        "13.900107341853",
+        "12.389828"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T09:48:07"
+        ],
+        "source_rows": [
+          495
+        ],
+        "rates_microgray_per_hour": [
+          "7.353946"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T09:51:40"
+        ],
+        "source_rows": [
+          498
+        ],
+        "rates_microgray_per_hour": [
+          "22.807549"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "1.2150537634408602150537634408602150537634408602151",
+      "post_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "15.552336323943661971830985915492957746478873239437",
+      "absolute_differences_microgray_per_hour": [
+        "1.6522289820906619718309859154929577464788732394366",
+        "3.1625083239436619718309859154929577464788732394366"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        496
+      ],
+      "group_key": "dostel2-2022-04-04.csv/98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452/496,497",
+      "rate_range_microgray_per_hour": "1.510279341853"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T18:05:00",
+        "2022-04-03T18:05:00"
+      ],
+      "source_rows": [
+        926,
+        927
+      ],
+      "rates_microgray_per_hour": [
+        "11.3696196134185",
+        "12.758821"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T18:03:20"
+        ],
+        "source_rows": [
+          925
+        ],
+        "rates_microgray_per_hour": [
+          "9.878737"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T18:06:40"
+        ],
+        "source_rows": [
+          928
+        ],
+        "rates_microgray_per_hour": [
+          "11.459603"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "10.66917",
+      "absolute_differences_microgray_per_hour": [
+        "0.7004496134185",
+        "2.089651"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        926
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/926,927",
+      "rate_range_microgray_per_hour": "1.3892013865815"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-03-01",
+      "source_file": "dostel1-2022-03-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01T00%3A00&timestamp%3C2022-03-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-03-01T09:20:00",
+        "2022-03-01T09:20:00"
+      ],
+      "source_rows": [
+        469,
+        470
+      ],
+      "rates_microgray_per_hour": [
+        "5.61126966666667",
+        "4.474783"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-03-01T09:18:20"
+        ],
+        "source_rows": [
+          468
+        ],
+        "rates_microgray_per_hour": [
+          "7.677624"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-03-01T09:21:40"
+        ],
+        "source_rows": [
+          471
+        ],
+        "rates_microgray_per_hour": [
+          "4.681402"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.179513",
+      "absolute_differences_microgray_per_hour": [
+        "0.56824333333333",
+        "1.70473"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        469
+      ],
+      "group_key": "dostel1-2022-03-01.csv/d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1/469,470",
+      "rate_range_microgray_per_hour": "1.13648666666667"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T00:25:00",
+        "2022-04-07T00:25:00"
+      ],
+      "source_rows": [
+        21,
+        22
+      ],
+      "rates_microgray_per_hour": [
+        "11.3223096666667",
+        "10.374563"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T00:23:20"
+        ],
+        "source_rows": [
+          20
+        ],
+        "rates_microgray_per_hour": [
+          "12.768303"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T00:26:40"
+        ],
+        "source_rows": [
+          23
+        ],
+        "rates_microgray_per_hour": [
+          "10.824063"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "11.796183",
+      "absolute_differences_microgray_per_hour": [
+        "0.4738733333333",
+        "1.42162"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        21
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/21,22",
+      "rate_range_microgray_per_hour": "0.9477466666667"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T08:25:00",
+        "2022-04-03T08:25:00"
+      ],
+      "source_rows": [
+        438,
+        439
+      ],
+      "rates_microgray_per_hour": [
+        "2.93439095207668",
+        "3.801606"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T08:23:20"
+        ],
+        "source_rows": [
+          437
+        ],
+        "rates_microgray_per_hour": [
+          "2.913156"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T08:26:40"
+        ],
+        "source_rows": [
+          440
+        ],
+        "rates_microgray_per_hour": [
+          "2.185736"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.549446",
+      "absolute_differences_microgray_per_hour": [
+        "0.38494495207668",
+        "1.25216"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        438
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/438,439",
+      "rate_range_microgray_per_hour": "0.86721504792332"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_file": "dostel1-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T05:45:00",
+        "2022-04-04T05:45:00"
+      ],
+      "source_rows": [
+        325,
+        326
+      ],
+      "rates_microgray_per_hour": [
+        "5.90604142172524",
+        "6.686559"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T05:43:20"
+        ],
+        "source_rows": [
+          324
+        ],
+        "rates_microgray_per_hour": [
+          "4.990869"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T05:46:40"
+        ],
+        "source_rows": [
+          327
+        ],
+        "rates_microgray_per_hour": [
+          "6.025205"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "5.508037",
+      "absolute_differences_microgray_per_hour": [
+        "0.39800442172524",
+        "1.178522"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        325
+      ],
+      "group_key": "dostel1-2022-04-04.csv/b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f/325,326",
+      "rate_range_microgray_per_hour": "0.78051757827476"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T04:15:00",
+        "2022-04-07T04:15:00"
+      ],
+      "source_rows": [
+        242,
+        243
+      ],
+      "rates_microgray_per_hour": [
+        "7.726664",
+        "8.463164"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:13:20"
+        ],
+        "source_rows": [
+          241
+        ],
+        "rates_microgray_per_hour": [
+          "6.789895"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:16:40"
+        ],
+        "source_rows": [
+          244
+        ],
+        "rates_microgray_per_hour": [
+          "7.926933"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "7.358414",
+      "absolute_differences_microgray_per_hour": [
+        "0.36825",
+        "1.10475"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        242
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/242,243",
+      "rate_range_microgray_per_hour": "0.7365"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-03",
+      "source_file": "dostel2-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T23:35:00",
+        "2022-04-03T23:35:00"
+      ],
+      "source_rows": [
+        1175,
+        1176
+      ],
+      "rates_microgray_per_hour": [
+        "9.86365",
+        "10.59929"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T23:33:20"
+        ],
+        "source_rows": [
+          1174
+        ],
+        "rates_microgray_per_hour": [
+          "7.588622"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T23:36:40"
+        ],
+        "source_rows": [
+          1177
+        ],
+        "rates_microgray_per_hour": [
+          "11.403038"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "92",
+      "pre_gap_vs_typical": "1.0869565217391304347826086956521739130434782608696",
+      "post_gap_vs_typical": "1.0869565217391304347826086956521739130434782608696",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "9.49583",
+      "absolute_differences_microgray_per_hour": [
+        "0.36782",
+        "1.10346"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1175
+      ],
+      "group_key": "dostel2-2022-04-03.csv/2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37/1175,1176",
+      "rate_range_microgray_per_hour": "0.73564"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-07",
+      "source_file": "dostel1-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T03:25:00",
+        "2022-04-07T03:25:00"
+      ],
+      "source_rows": [
+        208,
+        209
+      ],
+      "rates_microgray_per_hour": [
+        "6.204832",
+        "5.562049"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T03:23:20"
+        ],
+        "source_rows": [
+          207
+        ],
+        "rates_microgray_per_hour": [
+          "5.751669"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T03:26:40"
+        ],
+        "source_rows": [
+          210
+        ],
+        "rates_microgray_per_hour": [
+          "7.300778"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.5262235",
+      "absolute_differences_microgray_per_hour": [
+        "0.3213915",
+        "0.9641745"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        208
+      ],
+      "group_key": "dostel1-2022-04-07.csv/df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539/208,209",
+      "rate_range_microgray_per_hour": "0.642783"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-01",
+      "source_file": "dostel1-2022-04-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-01T00%3A00&timestamp%3C2022-04-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-01T09:10:00",
+        "2022-04-01T09:10:00"
+      ],
+      "source_rows": [
+        486,
+        487
+      ],
+      "rates_microgray_per_hour": [
+        "6.10317033333333",
+        "6.685863"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-01T09:08:20"
+        ],
+        "source_rows": [
+          485
+        ],
+        "rates_microgray_per_hour": [
+          "7.637366"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-01T09:11:40"
+        ],
+        "source_rows": [
+          488
+        ],
+        "rates_microgray_per_hour": [
+          "3.986282"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "90",
+      "pre_gap_vs_typical": "1.1111111111111111111111111111111111111111111111111",
+      "post_gap_vs_typical": "1.1111111111111111111111111111111111111111111111111",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "5.811824",
+      "absolute_differences_microgray_per_hour": [
+        "0.29134633333333",
+        "0.874039"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        486
+      ],
+      "group_key": "dostel1-2022-04-01.csv/d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441/486,487",
+      "rate_range_microgray_per_hour": "0.58269266666667"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-06",
+      "source_file": "dostel2-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T19:05:00",
+        "2022-04-06T19:05:00"
+      ],
+      "source_rows": [
+        969,
+        970
+      ],
+      "rates_microgray_per_hour": [
+        "7.32156566666667",
+        "6.76645"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T19:03:20"
+        ],
+        "source_rows": [
+          968
+        ],
+        "rates_microgray_per_hour": [
+          "9.079355"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T19:06:40"
+        ],
+        "source_rows": [
+          971
+        ],
+        "rates_microgray_per_hour": [
+          "6.118892"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "7.5991235",
+      "absolute_differences_microgray_per_hour": [
+        "0.27755783333333",
+        "0.8326735"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        969
+      ],
+      "group_key": "dostel2-2022-04-06.csv/548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232/969,970",
+      "rate_range_microgray_per_hour": "0.55511566666667"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T08:20:00",
+        "2022-04-03T08:20:00"
+      ],
+      "source_rows": [
+        434,
+        435
+      ],
+      "rates_microgray_per_hour": [
+        "3.21711033333333",
+        "2.740921"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T08:18:20"
+        ],
+        "source_rows": [
+          433
+        ],
+        "rates_microgray_per_hour": [
+          "3.591664"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T08:21:40"
+        ],
+        "source_rows": [
+          436
+        ],
+        "rates_microgray_per_hour": [
+          "3.318746"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.455205",
+      "absolute_differences_microgray_per_hour": [
+        "0.23809466666667",
+        "0.714284"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        434
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/434,435",
+      "rate_range_microgray_per_hour": "0.47618933333333"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T18:00:00",
+        "2022-04-03T18:00:00"
+      ],
+      "source_rows": [
+        922,
+        923
+      ],
+      "rates_microgray_per_hour": [
+        "6.27738944728435",
+        "5.818585"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T17:58:07"
+        ],
+        "source_rows": [
+          921
+        ],
+        "rates_microgray_per_hour": [
+          "4.461569"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T18:01:40"
+        ],
+        "source_rows": [
+          924
+        ],
+        "rates_microgray_per_hour": [
+          "8.788071"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.2988505747126436781609195402298850574712643678161",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.7568494037558685446009389671361502347417840375587",
+      "absolute_differences_microgray_per_hour": [
+        "0.47945995647151854460093896713615023474178403755869",
+        "0.93826440375586854460093896713615023474178403755869"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        922
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/922,923",
+      "rate_range_microgray_per_hour": "0.45880444728435"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-03",
+      "source_file": "dostel2-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T23:30:00",
+        "2022-04-03T23:30:00"
+      ],
+      "source_rows": [
+        1171,
+        1172
+      ],
+      "rates_microgray_per_hour": [
+        "5.5725422428115",
+        "6.029535"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T23:28:07"
+        ],
+        "source_rows": [
+          1170
+        ],
+        "rates_microgray_per_hour": [
+          "3.859094"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T23:31:40"
+        ],
+        "source_rows": [
+          1173
+        ],
+        "rates_microgray_per_hour": [
+          "7.051746"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "92",
+      "pre_gap_vs_typical": "1.2282608695652173913043478260869565217391304347826",
+      "post_gap_vs_typical": "1.0869565217391304347826086956521739130434782608696",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "5.5528483474178403755868544600938967136150234741784",
+      "absolute_differences_microgray_per_hour": [
+        "0.019693895393659624413145539906103286384976525821596",
+        "0.47668665258215962441314553990610328638497652582160"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1171
+      ],
+      "group_key": "dostel2-2022-04-03.csv/2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37/1171,1172",
+      "rate_range_microgray_per_hour": "0.4569927571885"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T15:50:00",
+        "2022-04-07T15:50:00"
+      ],
+      "source_rows": [
+        817,
+        818
+      ],
+      "rates_microgray_per_hour": [
+        "8.61787433333333",
+        "8.179296"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T15:48:20"
+        ],
+        "source_rows": [
+          816
+        ],
+        "rates_microgray_per_hour": [
+          "8.949558"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T15:51:40"
+        ],
+        "source_rows": [
+          819
+        ],
+        "rates_microgray_per_hour": [
+          "8.713316"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "8.831437",
+      "absolute_differences_microgray_per_hour": [
+        "0.21356266666667",
+        "0.652141"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        817
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/817,818",
+      "rate_range_microgray_per_hour": "0.43857833333333"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-02",
+      "source_file": "dostel1-2022-04-02.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-02T00%3A00&timestamp%3C2022-04-03T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-02T04:25:00",
+        "2022-04-02T04:25:00"
+      ],
+      "source_rows": [
+        237,
+        238
+      ],
+      "rates_microgray_per_hour": [
+        "6.73020805111821",
+        "6.301909"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-02T04:23:20"
+        ],
+        "source_rows": [
+          236
+        ],
+        "rates_microgray_per_hour": [
+          "8.070155"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-02T04:26:40"
+        ],
+        "source_rows": [
+          239
+        ],
+        "rates_microgray_per_hour": [
+          "5.92344"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.9967975",
+      "absolute_differences_microgray_per_hour": [
+        "0.26658944888179",
+        "0.6948885"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        237
+      ],
+      "group_key": "dostel1-2022-04-02.csv/f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b/237,238",
+      "rate_range_microgray_per_hour": "0.42829905111821"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-03-01",
+      "source_file": "dostel1-2022-03-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01T00%3A00&timestamp%3C2022-03-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-03-01T18:30:00",
+        "2022-03-01T18:30:00"
+      ],
+      "source_rows": [
+        951,
+        952
+      ],
+      "rates_microgray_per_hour": [
+        "6.03754233333333",
+        "5.625719"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-03-01T18:28:20"
+        ],
+        "source_rows": [
+          950
+        ],
+        "rates_microgray_per_hour": [
+          "5.778173"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-03-01T18:31:40"
+        ],
+        "source_rows": [
+          953
+        ],
+        "rates_microgray_per_hour": [
+          "6.708735"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.243454",
+      "absolute_differences_microgray_per_hour": [
+        "0.20591166666667",
+        "0.617735"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        951
+      ],
+      "group_key": "dostel1-2022-03-01.csv/d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1/951,952",
+      "rate_range_microgray_per_hour": "0.41182333333333"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-07",
+      "source_file": "dostel1-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T04:45:00",
+        "2022-04-07T04:45:00"
+      ],
+      "source_rows": [
+        269,
+        270
+      ],
+      "rates_microgray_per_hour": [
+        "2.304217",
+        "2.706691"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:43:20"
+        ],
+        "source_rows": [
+          268
+        ],
+        "rates_microgray_per_hour": [
+          "1.61162"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:46:40"
+        ],
+        "source_rows": [
+          271
+        ],
+        "rates_microgray_per_hour": [
+          "2.59434"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.10298",
+      "absolute_differences_microgray_per_hour": [
+        "0.201237",
+        "0.603711"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        269
+      ],
+      "group_key": "dostel1-2022-04-07.csv/df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539/269,270",
+      "rate_range_microgray_per_hour": "0.402474"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-03",
+      "source_file": "dostel1-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T19:25:00",
+        "2022-04-03T19:25:00"
+      ],
+      "source_rows": [
+        987,
+        988
+      ],
+      "rates_microgray_per_hour": [
+        "2.26705294871795",
+        "1.87457"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T19:23:20"
+        ],
+        "source_rows": [
+          986
+        ],
+        "rates_microgray_per_hour": [
+          "2.138756"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T19:26:40"
+        ],
+        "source_rows": [
+          989
+        ],
+        "rates_microgray_per_hour": [
+          "2.732035"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.4353955",
+      "absolute_differences_microgray_per_hour": [
+        "0.16834255128205",
+        "0.5608255"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        987
+      ],
+      "group_key": "dostel1-2022-04-03.csv/6a90d086a937ab43848596f60e5e82f0f41a27d19a5e6b415a09f91831c4141e/987,988",
+      "rate_range_microgray_per_hour": "0.39248294871795"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-05",
+      "source_file": "dostel1-2022-04-05.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-05T00%3A00&timestamp%3C2022-04-06T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "c01158fff753094433b808fff766254af9df32efc73c4a0048ca983f8e914ac1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-05T23:40:00",
+        "2022-04-05T23:40:00"
+      ],
+      "source_rows": [
+        1188,
+        1189
+      ],
+      "rates_microgray_per_hour": [
+        "11.3549327316294",
+        "10.962989"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-05T23:38:20"
+        ],
+        "source_rows": [
+          1187
+        ],
+        "rates_microgray_per_hour": [
+          "13.161939"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-05T23:41:40"
+        ],
+        "source_rows": [
+          1190
+        ],
+        "rates_microgray_per_hour": [
+          "10.102665"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "85",
+      "pre_gap_vs_typical": "1.1764705882352941176470588235294117647058823529412",
+      "post_gap_vs_typical": "1.1764705882352941176470588235294117647058823529412",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "11.632302",
+      "absolute_differences_microgray_per_hour": [
+        "0.2773692683706",
+        "0.669313"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1188
+      ],
+      "group_key": "dostel1-2022-04-05.csv/c01158fff753094433b808fff766254af9df32efc73c4a0048ca983f8e914ac1/1188,1189",
+      "rate_range_microgray_per_hour": "0.3919437316294"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-07",
+      "source_file": "dostel1-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T04:50:00",
+        "2022-04-07T04:50:00"
+      ],
+      "source_rows": [
+        273,
+        274
+      ],
+      "rates_microgray_per_hour": [
+        "3.54585647435897",
+        "3.927479"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:48:20"
+        ],
+        "source_rows": [
+          272
+        ],
+        "rates_microgray_per_hour": [
+          "2.349626"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:51:40"
+        ],
+        "source_rows": [
+          275
+        ],
+        "rates_microgray_per_hour": [
+          "4.273185"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.3114055",
+      "absolute_differences_microgray_per_hour": [
+        "0.23445097435897",
+        "0.6160735"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        273
+      ],
+      "group_key": "dostel1-2022-04-07.csv/df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539/273,274",
+      "rate_range_microgray_per_hour": "0.38162252564103"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T15:45:00",
+        "2022-04-07T15:45:00"
+      ],
+      "source_rows": [
+        813,
+        814
+      ],
+      "rates_microgray_per_hour": [
+        "8.396438",
+        "8.047426"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T15:43:20"
+        ],
+        "source_rows": [
+          812
+        ],
+        "rates_microgray_per_hour": [
+          "8.359252"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T15:46:40"
+        ],
+        "source_rows": [
+          815
+        ],
+        "rates_microgray_per_hour": [
+          "8.782636"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "8.570944",
+      "absolute_differences_microgray_per_hour": [
+        "0.174506",
+        "0.523518"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        813
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/813,814",
+      "rate_range_microgray_per_hour": "0.349012"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_file": "dostel1-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T05:40:00",
+        "2022-04-04T05:40:00"
+      ],
+      "source_rows": [
+        321,
+        322
+      ],
+      "rates_microgray_per_hour": [
+        "4.81137884345048",
+        "5.116355"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T05:38:07"
+        ],
+        "source_rows": [
+          320
+        ],
+        "rates_microgray_per_hour": [
+          "4.204106"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T05:41:40"
+        ],
+        "source_rows": [
+          323
+        ],
+        "rates_microgray_per_hour": [
+          "5.192621"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.2696629213483146067415730337078651685393258426966",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "4.7285294507042253521126760563380281690140845070423",
+      "absolute_differences_microgray_per_hour": [
+        "0.082849392746254647887323943661971830985915492957746",
+        "0.38782554929577464788732394366197183098591549295775"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        321
+      ],
+      "group_key": "dostel1-2022-04-04.csv/b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f/321,322",
+      "rate_range_microgray_per_hour": "0.30497615654952"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-01",
+      "source_file": "dostel1-2022-04-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-01T00%3A00&timestamp%3C2022-04-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-01T09:15:00",
+        "2022-04-01T09:15:00"
+      ],
+      "source_rows": [
+        490,
+        491
+      ],
+      "rates_microgray_per_hour": [
+        "2.99937726837061",
+        "2.698345"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-01T09:13:20"
+        ],
+        "source_rows": [
+          489
+        ],
+        "rates_microgray_per_hour": [
+          "4.107364"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-01T09:16:53"
+        ],
+        "source_rows": [
+          492
+        ],
+        "rates_microgray_per_hour": [
+          "2.231557"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "113",
+      "typical_gap_seconds_this_file": "90",
+      "pre_gap_vs_typical": "1.1111111111111111111111111111111111111111111111111",
+      "post_gap_vs_typical": "1.2555555555555555555555555555555555555555555555556",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.2267034366197183098591549295774647887323943661972",
+      "absolute_differences_microgray_per_hour": [
+        "0.22732616824910830985915492957746478873239436619718",
+        "0.52835843661971830985915492957746478873239436619718"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        490
+      ],
+      "group_key": "dostel1-2022-04-01.csv/d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441/490,491",
+      "rate_range_microgray_per_hour": "0.30103226837061"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-06",
+      "source_file": "dostel2-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T19:10:00",
+        "2022-04-06T19:10:00"
+      ],
+      "source_rows": [
+        973,
+        974
+      ],
+      "rates_microgray_per_hour": [
+        "3.15442708306709",
+        "3.454365"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T19:08:20"
+        ],
+        "source_rows": [
+          972
+        ],
+        "rates_microgray_per_hour": [
+          "3.725152"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T19:11:40"
+        ],
+        "source_rows": [
+          975
+        ],
+        "rates_microgray_per_hour": [
+          "2.383929"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.0545405",
+      "absolute_differences_microgray_per_hour": [
+        "0.09988658306709",
+        "0.3998245"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        973
+      ],
+      "group_key": "dostel2-2022-04-06.csv/548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232/973,974",
+      "rate_range_microgray_per_hour": "0.29993791693291"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_file": "dostel1-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T03:00:00",
+        "2022-04-04T03:00:00"
+      ],
+      "source_rows": [
+        160,
+        161
+      ],
+      "rates_microgray_per_hour": [
+        "3.33980852564103",
+        "3.614536"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T02:58:08"
+        ],
+        "source_rows": [
+          159
+        ],
+        "rates_microgray_per_hour": [
+          "3.850905"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T03:01:40"
+        ],
+        "source_rows": [
+          162
+        ],
+        "rates_microgray_per_hour": [
+          "2.492653"
+        ]
+      },
+      "pre_gap_seconds": "112",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.2584269662921348314606741573033707865168539325843",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.1333379056603773584905660377358490566037735849057",
+      "absolute_differences_microgray_per_hour": [
+        "0.20647061998065264150943396226415094339622641509434",
+        "0.48119809433962264150943396226415094339622641509434"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        160
+      ],
+      "group_key": "dostel1-2022-04-04.csv/b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f/160,161",
+      "rate_range_microgray_per_hour": "0.27472747435897"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-07",
+      "source_file": "dostel1-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T03:30:00",
+        "2022-04-07T03:30:00"
+      ],
+      "source_rows": [
+        212,
+        213
+      ],
+      "rates_microgray_per_hour": [
+        "6.90816821405751",
+        "7.182246"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T03:28:20"
+        ],
+        "source_rows": [
+          211
+        ],
+        "rates_microgray_per_hour": [
+          "6.739566"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T03:31:40"
+        ],
+        "source_rows": [
+          214
+        ],
+        "rates_microgray_per_hour": [
+          "6.814827"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.7771965",
+      "absolute_differences_microgray_per_hour": [
+        "0.13097171405751",
+        "0.4050495"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        212
+      ],
+      "group_key": "dostel1-2022-04-07.csv/df0dd26da364bfd5e3b2412bd6361925746408346f20cbcb66e697f0eb032539/212,213",
+      "rate_range_microgray_per_hour": "0.27407778594249"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-08",
+      "source_file": "dostel1-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T04:25:00",
+        "2022-04-08T04:25:00"
+      ],
+      "source_rows": [
+        265,
+        266
+      ],
+      "rates_microgray_per_hour": [
+        "3.688277",
+        "3.956146"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T04:23:20"
+        ],
+        "source_rows": [
+          264
+        ],
+        "rates_microgray_per_hour": [
+          "4.020512"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T04:26:40"
+        ],
+        "source_rows": [
+          267
+        ],
+        "rates_microgray_per_hour": [
+          "3.088173"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "86",
+      "pre_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "post_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "3.5543425",
+      "absolute_differences_microgray_per_hour": [
+        "0.1339345",
+        "0.4018035"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        265
+      ],
+      "group_key": "dostel1-2022-04-08.csv/36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90/265,266",
+      "rate_range_microgray_per_hour": "0.267869"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-03-01",
+      "source_file": "dostel1-2022-03-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01T00%3A00&timestamp%3C2022-03-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-03-01T09:15:00",
+        "2022-03-01T09:15:00"
+      ],
+      "source_rows": [
+        465,
+        466
+      ],
+      "rates_microgray_per_hour": [
+        "10.1122485512821",
+        "9.853933"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-03-01T09:13:08"
+        ],
+        "source_rows": [
+          464
+        ],
+        "rates_microgray_per_hour": [
+          "11.053704"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-03-01T09:16:40"
+        ],
+        "source_rows": [
+          467
+        ],
+        "rates_microgray_per_hour": [
+          "9.316134"
+        ]
+      },
+      "pre_gap_seconds": "112",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.2584269662921348314606741573033707865168539325843",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "10.135742490566037735849056603773584905660377358491",
+      "absolute_differences_microgray_per_hour": [
+        "0.023493939283937735849056603773584905660377358490566",
+        "0.28180949056603773584905660377358490566037735849057"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        465
+      ],
+      "group_key": "dostel1-2022-03-01.csv/d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1/465,466",
+      "rate_range_microgray_per_hour": "0.2583155512821"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-06",
+      "source_file": "dostel2-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T17:45:00",
+        "2022-04-06T17:45:00"
+      ],
+      "source_rows": [
+        907,
+        908
+      ],
+      "rates_microgray_per_hour": [
+        "2.28090866666667",
+        "2.530861"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T17:43:20"
+        ],
+        "source_rows": [
+          906
+        ],
+        "rates_microgray_per_hour": [
+          "2.254547"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T17:46:40"
+        ],
+        "source_rows": [
+          909
+        ],
+        "rates_microgray_per_hour": [
+          "2.057318"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.1559325",
+      "absolute_differences_microgray_per_hour": [
+        "0.12497616666667",
+        "0.3749285"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        907
+      ],
+      "group_key": "dostel2-2022-04-06.csv/548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232/907,908",
+      "rate_range_microgray_per_hour": "0.24995233333333"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-05",
+      "source_file": "dostel2-2022-04-05.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-05T00%3A00&timestamp%3C2022-04-06T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b27e893317dfa1fce278707239560a7726af86919e5a9492f64311178002dfad",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-05T14:25:00",
+        "2022-04-05T14:25:00"
+      ],
+      "source_rows": [
+        752,
+        753
+      ],
+      "rates_microgray_per_hour": [
+        "5.36964866666667",
+        "5.126989"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-05T14:23:20"
+        ],
+        "source_rows": [
+          751
+        ],
+        "rates_microgray_per_hour": [
+          "7.065886"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-05T14:26:40"
+        ],
+        "source_rows": [
+          754
+        ],
+        "rates_microgray_per_hour": [
+          "3.916071"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "5.4909785",
+      "absolute_differences_microgray_per_hour": [
+        "0.12132983333333",
+        "0.3639895"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        752
+      ],
+      "group_key": "dostel2-2022-04-05.csv/b27e893317dfa1fce278707239560a7726af86919e5a9492f64311178002dfad/752,753",
+      "rate_range_microgray_per_hour": "0.24265966666667"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_file": "dostel1-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T17:20:00",
+        "2022-04-04T17:20:00"
+      ],
+      "source_rows": [
+        894,
+        895
+      ],
+      "rates_microgray_per_hour": [
+        "11.5093426282051",
+        "11.277169"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T17:18:08"
+        ],
+        "source_rows": [
+          893
+        ],
+        "rates_microgray_per_hour": [
+          "12.000725"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T17:21:40"
+        ],
+        "source_rows": [
+          896
+        ],
+        "rates_microgray_per_hour": [
+          "11.191168"
+        ]
+      },
+      "pre_gap_seconds": "112",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.2584269662921348314606741573033707865168539325843",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "11.573034509433962264150943396226415094339622641509",
+      "absolute_differences_microgray_per_hour": [
+        "0.063691881228862264150943396226415094339622641509434",
+        "0.29586550943396226415094339622641509433962264150943"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        894
+      ],
+      "group_key": "dostel1-2022-04-04.csv/b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f/894,895",
+      "rate_range_microgray_per_hour": "0.2321736282051"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_file": "dostel2-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T08:30:00",
+        "2022-04-04T08:30:00"
+      ],
+      "source_rows": [
+        434,
+        435
+      ],
+      "rates_microgray_per_hour": [
+        "2.44715456410256",
+        "2.226404"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T08:28:08"
+        ],
+        "source_rows": [
+          433
+        ],
+        "rates_microgray_per_hour": [
+          "2.342752"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T08:31:40"
+        ],
+        "source_rows": [
+          436
+        ],
+        "rates_microgray_per_hour": [
+          "2.784836"
+        ]
+      },
+      "pre_gap_seconds": "112",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "1.2043010752688172043010752688172043010752688172043",
+      "post_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.5763058113207547169811320754716981132075471698113",
+      "absolute_differences_microgray_per_hour": [
+        "0.12915124721819471698113207547169811320754716981132",
+        "0.34990181132075471698113207547169811320754716981132"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        434
+      ],
+      "group_key": "dostel2-2022-04-04.csv/98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452/434,435",
+      "rate_range_microgray_per_hour": "0.22075056410256"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-03",
+      "source_file": "dostel2-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T20:55:00",
+        "2022-04-03T20:55:00"
+      ],
+      "source_rows": [
+        1052,
+        1053
+      ],
+      "rates_microgray_per_hour": [
+        "2.06152466666667",
+        "1.846501"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T20:53:20"
+        ],
+        "source_rows": [
+          1051
+        ],
+        "rates_microgray_per_hour": [
+          "1.965428"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T20:56:40"
+        ],
+        "source_rows": [
+          1054
+        ],
+        "rates_microgray_per_hour": [
+          "2.372645"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "92",
+      "pre_gap_vs_typical": "1.0869565217391304347826086956521739130434782608696",
+      "post_gap_vs_typical": "1.0869565217391304347826086956521739130434782608696",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.1690365",
+      "absolute_differences_microgray_per_hour": [
+        "0.10751183333333",
+        "0.3225355"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1052
+      ],
+      "group_key": "dostel2-2022-04-03.csv/2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37/1052,1053",
+      "rate_range_microgray_per_hour": "0.21502366666667"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-06",
+      "source_file": "dostel2-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T17:50:00",
+        "2022-04-06T17:50:00"
+      ],
+      "source_rows": [
+        911,
+        912
+      ],
+      "rates_microgray_per_hour": [
+        "2.63745288461538",
+        "2.469325"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T17:48:20"
+        ],
+        "source_rows": [
+          910
+        ],
+        "rates_microgray_per_hour": [
+          "2.890452"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T17:51:40"
+        ],
+        "source_rows": [
+          913
+        ],
+        "rates_microgray_per_hour": [
+          "2.561675"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.7260635",
+      "absolute_differences_microgray_per_hour": [
+        "0.08861061538462",
+        "0.2567385"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        911
+      ],
+      "group_key": "dostel2-2022-04-06.csv/548b3e1677412eb2209434cdf98fa37cecf85b62052ede6261f4248cb01f0232/911,912",
+      "rate_range_microgray_per_hour": "0.16812788461538"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_file": "dostel2-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T12:20:00",
+        "2022-04-04T12:20:00"
+      ],
+      "source_rows": [
+        631,
+        632
+      ],
+      "rates_microgray_per_hour": [
+        "1.81623326517572",
+        "1.649041"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T12:18:07"
+        ],
+        "source_rows": [
+          630
+        ],
+        "rates_microgray_per_hour": [
+          "1.974824"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T12:21:40"
+        ],
+        "source_rows": [
+          633
+        ],
+        "rates_microgray_per_hour": [
+          "1.804218"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "1.2150537634408602150537634408602150537634408602151",
+      "post_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "1.8843147136150234741784037558685446009389671361502",
+      "absolute_differences_microgray_per_hour": [
+        "0.068081448439303474178403755868544600938967136150235",
+        "0.23527371361502347417840375586854460093896713615023"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        631
+      ],
+      "group_key": "dostel2-2022-04-04.csv/98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452/631,632",
+      "rate_range_microgray_per_hour": "0.16719226517572"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-02",
+      "source_file": "dostel1-2022-04-02.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-02T00%3A00&timestamp%3C2022-04-03T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-02T04:20:00",
+        "2022-04-02T04:20:00"
+      ],
+      "source_rows": [
+        233,
+        234
+      ],
+      "rates_microgray_per_hour": [
+        "7.976401",
+        "8.13568"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-02T04:18:20"
+        ],
+        "source_rows": [
+          232
+        ],
+        "rates_microgray_per_hour": [
+          "8.451792"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-02T04:21:40"
+        ],
+        "source_rows": [
+          235
+        ],
+        "rates_microgray_per_hour": [
+          "7.341731"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "7.8967615",
+      "absolute_differences_microgray_per_hour": [
+        "0.0796395",
+        "0.2389185"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        233
+      ],
+      "group_key": "dostel1-2022-04-02.csv/f45d3798eb68cd3511ea1c3d63c7c492f101135381f068e25b0553057e185f7b/233,234",
+      "rate_range_microgray_per_hour": "0.159279"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-04",
+      "source_file": "dostel2-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T08:35:00",
+        "2022-04-04T08:35:00"
+      ],
+      "source_rows": [
+        438,
+        439
+      ],
+      "rates_microgray_per_hour": [
+        "1.87998666666667",
+        "1.721448"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T08:33:20"
+        ],
+        "source_rows": [
+          437
+        ],
+        "rates_microgray_per_hour": [
+          "2.037696"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T08:36:40"
+        ],
+        "source_rows": [
+          440
+        ],
+        "rates_microgray_per_hour": [
+          "1.880816"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "93",
+      "pre_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "post_gap_vs_typical": "1.0752688172043010752688172043010752688172043010753",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "1.959256",
+      "absolute_differences_microgray_per_hour": [
+        "0.07926933333333",
+        "0.237808"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        438
+      ],
+      "group_key": "dostel2-2022-04-04.csv/98e0f397a4ea06fcc055195d7e6d65a65582be9423cdc837b44feb0c81436452/438,439",
+      "rate_range_microgray_per_hour": "0.15853866666667"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-05",
+      "source_file": "dostel2-2022-04-05.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-05T00%3A00&timestamp%3C2022-04-06T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b27e893317dfa1fce278707239560a7726af86919e5a9492f64311178002dfad",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-05T14:30:00",
+        "2022-04-05T14:30:00"
+      ],
+      "source_rows": [
+        756,
+        757
+      ],
+      "rates_microgray_per_hour": [
+        "2.7468748913738",
+        "2.595621"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-05T14:28:20"
+        ],
+        "source_rows": [
+          755
+        ],
+        "rates_microgray_per_hour": [
+          "3.0933"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-05T14:31:40"
+        ],
+        "source_rows": [
+          758
+        ],
+        "rates_microgray_per_hour": [
+          "2.574157"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.8337285",
+      "absolute_differences_microgray_per_hour": [
+        "0.0868536086262",
+        "0.2381075"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        756
+      ],
+      "group_key": "dostel2-2022-04-05.csv/b27e893317dfa1fce278707239560a7726af86919e5a9492f64311178002dfad/756,757",
+      "rate_range_microgray_per_hour": "0.1512538913738"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-03-01",
+      "source_file": "dostel1-2022-03-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01T00%3A00&timestamp%3C2022-03-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-03-01T18:25:00",
+        "2022-03-01T18:25:00"
+      ],
+      "source_rows": [
+        947,
+        948
+      ],
+      "rates_microgray_per_hour": [
+        "5.46090767412141",
+        "5.312235"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-03-01T18:23:07"
+        ],
+        "source_rows": [
+          946
+        ],
+        "rates_microgray_per_hour": [
+          "5.415854"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-03-01T18:26:40"
+        ],
+        "source_rows": [
+          949
+        ],
+        "rates_microgray_per_hour": [
+          "5.660491"
+        ]
+      },
+      "pre_gap_seconds": "113",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.2696629213483146067415730337078651685393258426966",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "5.5456379483568075117370892018779342723004694835681",
+      "absolute_differences_microgray_per_hour": [
+        "0.084730274235397511737089201877934272300469483568075",
+        "0.23340294835680751173708920187793427230046948356808"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        947
+      ],
+      "group_key": "dostel1-2022-03-01.csv/d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1/947,948",
+      "rate_range_microgray_per_hour": "0.14867267412141"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-06",
+      "source_file": "dostel1-2022-04-06.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-06T00%3A00&timestamp%3C2022-04-07T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "8e3923756ea58e6cb92bd0010dd30a5f626abcfd401be8c15349856e28a1772f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-06T11:15:00",
+        "2022-04-06T11:15:00"
+      ],
+      "source_rows": [
+        593,
+        594
+      ],
+      "rates_microgray_per_hour": [
+        "4.66515",
+        "4.523308"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-06T11:13:20"
+        ],
+        "source_rows": [
+          592
+        ],
+        "rates_microgray_per_hour": [
+          "5.288667"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-06T11:16:40"
+        ],
+        "source_rows": [
+          595
+        ],
+        "rates_microgray_per_hour": [
+          "4.183475"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "87",
+      "pre_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "post_gap_vs_typical": "1.1494252873563218390804597701149425287356321839080",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "4.736071",
+      "absolute_differences_microgray_per_hour": [
+        "0.070921",
+        "0.212763"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        593
+      ],
+      "group_key": "dostel1-2022-04-06.csv/8e3923756ea58e6cb92bd0010dd30a5f626abcfd401be8c15349856e28a1772f/593,594",
+      "rate_range_microgray_per_hour": "0.141842"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-03",
+      "source_file": "dostel2-2022-04-03.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-03T00%3A00&timestamp%3C2022-04-04T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-03T20:50:00",
+        "2022-04-03T20:50:00"
+      ],
+      "source_rows": [
+        1049,
+        1050
+      ],
+      "rates_microgray_per_hour": [
+        "2.01526097435897",
+        "1.884408"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-03T20:48:08"
+        ],
+        "source_rows": [
+          1048
+        ],
+        "rates_microgray_per_hour": [
+          "2.248927"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-03T20:53:20"
+        ],
+        "source_rows": [
+          1051
+        ],
+        "rates_microgray_per_hour": [
+          "1.965428"
+        ]
+      },
+      "pre_gap_seconds": "112",
+      "post_gap_seconds": "200",
+      "typical_gap_seconds_this_file": "92",
+      "pre_gap_vs_typical": "1.2173913043478260869565217391304347826086956521739",
+      "post_gap_vs_typical": "2.1739130434782608695652173913043478260869565217391",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.1471581282051282051282051282051282051282051282051",
+      "absolute_differences_microgray_per_hour": [
+        "0.13189715384615820512820512820512820512820512820513",
+        "0.26275012820512820512820512820512820512820512820513"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1049
+      ],
+      "group_key": "dostel2-2022-04-03.csv/2fee100e5d332d0ffc08894dd3bbfc51f9f583909610c2e11596f652ba07da37/1049,1050",
+      "rate_range_microgray_per_hour": "0.13085297435897"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-08",
+      "source_file": "dostel2-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "a1f17ffad747f5d169a01faf4d074aebd0df96675fef6b7c65f0c1569bac5c07",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T02:10:00",
+        "2022-04-08T02:10:00"
+      ],
+      "source_rows": [
+        142,
+        143
+      ],
+      "rates_microgray_per_hour": [
+        "2.70229644871795",
+        "2.812518"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T02:08:20"
+        ],
+        "source_rows": [
+          141
+        ],
+        "rates_microgray_per_hour": [
+          "3.327193"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T02:11:40"
+        ],
+        "source_rows": [
+          144
+        ],
+        "rates_microgray_per_hour": [
+          "2.045941"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.686567",
+      "absolute_differences_microgray_per_hour": [
+        "0.01572944871795",
+        "0.125951"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        142
+      ],
+      "group_key": "dostel2-2022-04-08.csv/a1f17ffad747f5d169a01faf4d074aebd0df96675fef6b7c65f0c1569bac5c07/142,143",
+      "rate_range_microgray_per_hour": "0.11022155128205"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-04",
+      "source_file": "dostel1-2022-04-04.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-04T00%3A00&timestamp%3C2022-04-05T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-04T17:25:00",
+        "2022-04-04T17:25:00"
+      ],
+      "source_rows": [
+        898,
+        899
+      ],
+      "rates_microgray_per_hour": [
+        "11.087497",
+        "11.178804"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-04T17:23:20"
+        ],
+        "source_rows": [
+          897
+        ],
+        "rates_microgray_per_hour": [
+          "11.073331"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-04T17:26:40"
+        ],
+        "source_rows": [
+          900
+        ],
+        "rates_microgray_per_hour": [
+          "11.010356"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "11.0418435",
+      "absolute_differences_microgray_per_hour": [
+        "0.0456535",
+        "0.1369605"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        898
+      ],
+      "group_key": "dostel1-2022-04-04.csv/b36e3c304d07861d782b572f73e5287dc4dd11924f36b1c18f1ff303e7cb942f/898,899",
+      "rate_range_microgray_per_hour": "0.091307"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-08",
+      "source_file": "dostel2-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "a1f17ffad747f5d169a01faf4d074aebd0df96675fef6b7c65f0c1569bac5c07",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T02:05:00",
+        "2022-04-08T02:05:00"
+      ],
+      "source_rows": [
+        138,
+        139
+      ],
+      "rates_microgray_per_hour": [
+        "6.018435",
+        "5.946213"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T02:03:20"
+        ],
+        "source_rows": [
+          137
+        ],
+        "rates_microgray_per_hour": [
+          "7.886999"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T02:06:40"
+        ],
+        "source_rows": [
+          140
+        ],
+        "rates_microgray_per_hour": [
+          "4.222093"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "88",
+      "pre_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "post_gap_vs_typical": "1.1363636363636363636363636363636363636363636363636",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "6.054546",
+      "absolute_differences_microgray_per_hour": [
+        "0.036111",
+        "0.108333"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        138
+      ],
+      "group_key": "dostel2-2022-04-08.csv/a1f17ffad747f5d169a01faf4d074aebd0df96675fef6b7c65f0c1569bac5c07/138,139",
+      "rate_range_microgray_per_hour": "0.072222"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-05",
+      "source_file": "dostel1-2022-04-05.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-05T00%3A00&timestamp%3C2022-04-06T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "c01158fff753094433b808fff766254af9df32efc73c4a0048ca983f8e914ac1",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-05T23:35:00",
+        "2022-04-05T23:35:00"
+      ],
+      "source_rows": [
+        1184,
+        1185
+      ],
+      "rates_microgray_per_hour": [
+        "10.316703",
+        "10.385551"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-05T23:33:20"
+        ],
+        "source_rows": [
+          1183
+        ],
+        "rates_microgray_per_hour": [
+          "8.809629"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-05T23:36:40"
+        ],
+        "source_rows": [
+          1186
+        ],
+        "rates_microgray_per_hour": [
+          "11.754929"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "85",
+      "pre_gap_vs_typical": "1.1764705882352941176470588235294117647058823529412",
+      "post_gap_vs_typical": "1.1764705882352941176470588235294117647058823529412",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "10.282279",
+      "absolute_differences_microgray_per_hour": [
+        "0.034424",
+        "0.103272"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        1184
+      ],
+      "group_key": "dostel1-2022-04-05.csv/c01158fff753094433b808fff766254af9df32efc73c4a0048ca983f8e914ac1/1184,1185",
+      "rate_range_microgray_per_hour": "0.068848"
+    },
+    {
+      "instrument_id": "DosTel2",
+      "day": "2022-04-07",
+      "source_file": "dostel2-2022-04-07.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel2&timestamp%3E=2022-04-07T00%3A00&timestamp%3C2022-04-08T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-07T04:20:00",
+        "2022-04-07T04:20:00"
+      ],
+      "source_rows": [
+        246,
+        247
+      ],
+      "rates_microgray_per_hour": [
+        "7.26250408974359",
+        "7.19748"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:18:20"
+        ],
+        "source_rows": [
+          245
+        ],
+        "rates_microgray_per_hour": [
+          "7.087995"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-07T04:21:40"
+        ],
+        "source_rows": [
+          248
+        ],
+        "rates_microgray_per_hour": [
+          "7.476373"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "89",
+      "pre_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "post_gap_vs_typical": "1.1235955056179775280898876404494382022471910112360",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "7.282184",
+      "absolute_differences_microgray_per_hour": [
+        "0.01967991025641",
+        "0.084704"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        246
+      ],
+      "group_key": "dostel2-2022-04-07.csv/b96bfbf80a2cc55e0b831d3ffa9c6ca2c776be3d2833634e116cbce67bec364f/246,247",
+      "rate_range_microgray_per_hour": "0.06502408974359"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-01",
+      "source_file": "dostel1-2022-04-01.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-01T00%3A00&timestamp%3C2022-04-02T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-01T04:45:00",
+        "2022-04-01T04:45:00"
+      ],
+      "source_rows": [
+        261,
+        262
+      ],
+      "rates_microgray_per_hour": [
+        "1.64210533333333",
+        "1.695922"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-01T04:43:20"
+        ],
+        "source_rows": [
+          260
+        ],
+        "rates_microgray_per_hour": [
+          "1.618188"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-01T04:46:52"
+        ],
+        "source_rows": [
+          263
+        ],
+        "rates_microgray_per_hour": [
+          "1.605748"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "112",
+      "typical_gap_seconds_this_file": "90",
+      "pre_gap_vs_typical": "1.1111111111111111111111111111111111111111111111111",
+      "post_gap_vs_typical": "1.2444444444444444444444444444444444444444444444444",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "1.6123200754716981132075471698113207547169811320755",
+      "absolute_differences_microgray_per_hour": [
+        "0.029785257861631886792452830188679245283018867924528",
+        "0.083601924528301886792452830188679245283018867924528"
+      ],
+      "closest_source_positions": [
+        1
+      ],
+      "closest_source_rows": [
+        261
+      ],
+      "group_key": "dostel1-2022-04-01.csv/d2f517eec5129528a1661b972193201676521906464e3d3e9f021794c7ed3441/261,262",
+      "rate_range_microgray_per_hour": "0.05381666666667"
+    },
+    {
+      "instrument_id": "DosTel1",
+      "day": "2022-04-08",
+      "source_file": "dostel1-2022-04-08.csv",
+      "source_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-04-08T00%3A00&timestamp%3C2022-04-09T00%3A00&absorbed_dose_rate&format=csv",
+      "sha256": "36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90",
+      "timezone_convention": "not_supplied",
+      "timestamps_as_recorded": [
+        "2022-04-08T04:30:00",
+        "2022-04-08T04:30:00"
+      ],
+      "source_rows": [
+        269,
+        270
+      ],
+      "rates_microgray_per_hour": [
+        "2.21948451643192",
+        "2.226689"
+      ],
+      "before": {
+        "timestamps_as_recorded": [
+          "2022-04-08T04:28:20"
+        ],
+        "source_rows": [
+          268
+        ],
+        "rates_microgray_per_hour": [
+          "2.871817"
+        ]
+      },
+      "after": {
+        "timestamps_as_recorded": [
+          "2022-04-08T04:31:40"
+        ],
+        "source_rows": [
+          271
+        ],
+        "rates_microgray_per_hour": [
+          "1.927654"
+        ]
+      },
+      "pre_gap_seconds": "100",
+      "post_gap_seconds": "100",
+      "typical_gap_seconds_this_file": "86",
+      "pre_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "post_gap_vs_typical": "1.1627906976744186046511627906976744186046511627907",
+      "comparison_status": "compared",
+      "comparison_blockers": [],
+      "expected_from_trend_microgray_per_hour": "2.3997355",
+      "absolute_differences_microgray_per_hour": [
+        "0.18025098356808",
+        "0.1730465"
+      ],
+      "closest_source_positions": [
+        2
+      ],
+      "closest_source_rows": [
+        270
+      ],
+      "group_key": "dostel1-2022-04-08.csv/36bdbba8c8b67c9d91714040fe0b908d8a89c866a60bd6a1080534fcde083a90/269,270",
+      "rate_range_microgray_per_hour": "0.00720448356808"
+    }
+  ]
+}
